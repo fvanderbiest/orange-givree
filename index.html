@@ -3,60 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert Agrumes - Rusticité & Récolte</title>
+    <title>Orange givrée ?</title>
+
+    <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='leafGradient' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234CAF50;stop-opacity:1' /><stop offset='100%' style='stop-color:%2366BB6A;stop-opacity:1' /></linearGradient><radialGradient id='dropGradient' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'><stop offset='0%' style='stop-color:rgb(255,255,255);stop-opacity:0.9' /><stop offset='100%' style='stop-color:rgb(173,216,230);stop-opacity:0.6' /></radialGradient></defs><path d='M 30 70 Q 10 50 40 20 Q 70 5 90 30 Q 80 60 55 85 L 30 70 Z' fill='url(%23leafGradient)'/><circle cx='50' cy='50' r='10' fill='url(%23dropGradient)' stroke='%2387CEEB' stroke-width='1'/></svg>" type="image/svg+xml">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='leafGradient' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234CAF50;stop-opacity:1' /><stop offset='100%' style='stop-color:%2366BB6A;stop-opacity:1' /></linearGradient><radialGradient id='dropGradient' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'><stop offset='0%' style='stop-color:rgb(255,255,255);stop-opacity:0.9)' /><stop offset='100%' style='stop-color:rgb(173,216,230);stop-opacity:0.6)' /></radialGradient></defs><path d='M 30 70 Q 10 50 40 20 Q 70 5 90 30 Q 80 60 55 85 L 30 70 Z' fill='url(%23leafGradient)'/><circle cx='50' cy='50' r='10' fill='url(%23dropGradient)' stroke='%2387CEEB' stroke-width='1'/></svg>" type="image/svg+xml">
-    <style>
-        body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; display: flex; height: 100vh; background: #f0f2f5; }
 
-        #map { flex: 1; height: 100%; background: #cbd5e0; }
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; display: flex; height: 100vh; background: #f8fafc; color: #1e293b; }
+
+        #map { flex: 1; height: 100%; background: #cbd5e1; }
 
         #sidebar {
-            width: 400px;
+            width: 420px;
             background: #fff;
-            border-left: 1px solid #ddd;
+            border-left: 1px solid #e2e8f0;
             padding: 20px;
             overflow-y: auto;
-            box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+            box-shadow: -4px 0 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
         }
 
-        h3 { color: #2c3e50; margin-top: 0; border-bottom: 3px solid #27ae60; padding-bottom: 10px; }
+        h2 { color: #166534; margin: 0 0 15px 0; display: flex; align-items: center; gap: 10px; }
+        h2 span { font-size: 0.8em; color: #15803d; }
 
         .period-selector {
-            margin: 15px 0; padding: 15px;
-            background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;
+            margin-bottom: 20px; padding: 15px;
+            background: #f1f5f9; border-radius: 12px; border: 1px solid #e2e8f0;
         }
+
+        #station-info { margin-bottom: 20px; padding: 0 5px; }
+        #station-name { color: #1e293b; font-weight: 800; font-size: 1.2em; }
 
         .agrume-card {
-            padding: 15px; margin-bottom: 15px; border-radius: 8px;
-            background: #fff; border: 1px solid #edf2f7;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 16px; margin-bottom: 12px; border-radius: 10px;
+            background: #fff; border: 1px solid #f1f5f9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
-        .status-ok { border-left: 6px solid #27ae60; }
-        .status-warning { border-left: 6px solid #f1c40f; background: #fffdf0; }
-        .status-ko { border-left: 6px solid #e74c3c; opacity: 0.8; background: #fdf2f2; }
+        .status-ok { border-left: 6px solid #22c55e; }
+        .status-warning { border-left: 6px solid #eab308; background: #fffbeb; }
+        .status-ko { border-left: 6px solid #ef4444; opacity: 0.75; background: #fef2f2; }
 
         .temp-tag {
-            background: #fee2e2; padding: 2px 5px; border-radius: 4px;
-            font-family: monospace; font-weight: bold; color: #b91c1c; font-size: 0.9em;
+            background: #fee2e2; padding: 1px 4px; border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, monospace;
+            font-weight: 700; color: #991b1b; font-size: 0.85em;
         }
 
         .badge {
-            display: inline-block; font-size: 0.75em; padding: 3px 8px;
-            border-radius: 12px; font-weight: bold; margin-top: 8px; margin-right: 5px;
+            display: inline-block; font-size: 0.7em; padding: 3px 8px;
+            border-radius: 6px; font-weight: 700; margin-top: 10px; margin-right: 5px;
+            text-transform: uppercase; letter-spacing: 0.02em;
         }
-        .badge-fruit { background: #e67e22; color: white; }
-        .badge-recolte { background: #3498db; color: white; }
+        .badge-fruit { background: #f97316; color: white; }
+        .badge-recolte { background: #3b82f6; color: white; }
 
         .legend {
             padding: 12px; background: white; line-height: 1.6em;
-            border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); font-size: 0.85em;
+            border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 0.8em;
         }
-        .legend i { width: 14px; height: 14px; float: left; margin-right: 10px; border-radius: 50%; border: 1px solid #444; }
+        .legend i { width: 14px; height: 14px; float: left; margin-right: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); }
 
-        select { width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #cbd5e0; margin-top: 5px; }
+        select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; margin-top: 8px; font-size: 0.9em; background: white; cursor: pointer; }
+
+        hr { border: 0; border-top: 1px solid #f1f5f9; margin: 20px 0; }
     </style>
 </head>
 <body>
@@ -64,24 +76,24 @@
 <div id="map"></div>
 
 <div id="sidebar">
-    <h3>Station : <span id="station-name">Sélectionnez un point</span></h3>
+    <h2>Orange givrée <span>🍊</span></h2>
+
+    <div id="station-info">
+        <span id="station-name">Sélectionnez une station</span><br>
+        <small id="min-display" style="color: #64748b;">Record de froid : - °C</small>
+    </div>
 
     <div class="period-selector">
-        <label for="period-select"><strong>Référence climatique :</strong></label>
+        <label for="period-select"><strong>Analyse climatique :</strong></label>
         <select id="period-select" onchange="refreshView()">
             <option value="last_5y" selected>Climat récent (5 ans)</option>
             <option value="last_10y">Tendance (10 ans)</option>
             <option value="last_20y">Historique (20 ans)</option>
         </select>
-        <p style="font-size: 0.85em; color: #4a5568; margin-top: 10px;">
-            Min. absolu station : <strong id="min-temp">-</strong>&deg;C
-        </p>
     </div>
 
-    <hr style="border:0; border-top:1px solid #eee; margin: 20px 0;">
-
     <div id="agrumes-container">
-        <p style="color: #a0aec0; font-style: italic; text-align: center;">Cliquez sur une station pour lancer l'analyse.</p>
+        <p style="color: #94a3b8; font-style: italic; text-align: center; margin-top: 40px;">Cliquez sur un point de la carte pour analyser les variétés possibles sur ce terroir.</p>
     </div>
 </div>
 
@@ -89,7 +101,9 @@
 
 <script>
     const map = L.map('map').setView([46.5, 2.5], 6);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
 
     let agrumesData = [];
     let geojsonData = null;
@@ -99,10 +113,11 @@
     const monthNames = ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sept", "Oct", "Nov", "Déc"];
 
     function getColor(t) {
-        return t > 0    ? '#00FF00' : t > -5   ? '#ADFF2F' : t > -8   ? '#FFFF00' :
-               t > -10  ? '#FFA500' : t > -12  ? '#FF4500' : t > -15  ? '#FF0000' : '#8B0000';
+        return t > 0    ? '#22c55e' : t > -5   ? '#84cc16' : t > -8   ? '#eab308' :
+               t > -10  ? '#f97316' : t > -12  ? '#ef4444' : t > -15  ? '#dc2626' : '#7f1d1d';
     }
 
+    // Chargement des données
     fetch('agrumes.json').then(res => res.json()).then(data => { agrumesData = data; });
     fetch('stations_temperatures.geojson').then(res => res.json()).then(data => { geojsonData = data; renderMap(); });
 
@@ -114,7 +129,7 @@
             filter: (f) => f.properties[period] && f.properties[period].min_absolute !== null,
             pointToLayer: (f, latlng) => L.circleMarker(latlng, {
                 radius: 8, fillColor: getColor(f.properties[period].min_absolute),
-                color: "#333", weight: 1.5, fillOpacity: 0.9
+                color: "#fff", weight: 2, fillOpacity: 0.9
             }),
             onEachFeature: (f, layer) => {
                 layer.on('click', () => { currentFeature = f; updateSidebarContent(); });
@@ -132,12 +147,28 @@
         const minAbs = periodStats.min_absolute;
 
         document.getElementById('station-name').innerText = props.nom;
-        document.getElementById('min-temp').innerText = minAbs;
+        document.getElementById('min-display').innerText = `Record de froid sur la période : ${minAbs}°C`;
 
         const container = document.getElementById('agrumes-container');
         container.innerHTML = "";
 
-        agrumesData.forEach(agrume => {
+        // --- Logique de Tri par Priorité ---
+        const sortedAgrumes = [...agrumesData].sort((a, b) => {
+            const getPriority = (agr) => {
+                const survit = minAbs > agr.seuil_arbre;
+                let fruitMenace = false;
+                agr.recolte.forEach(m => {
+                    if (periodStats.by_month["month_" + m] <= agr.seuil_fruit) fruitMenace = true;
+                });
+                if (!survit) return 3;
+                if (fruitMenace) return 2;
+                return 1;
+            };
+            return getPriority(a) - getPriority(b);
+        });
+
+        // --- Génération des cartes ---
+        sortedAgrumes.forEach(agrume => {
             const card = document.createElement('div');
             card.className = "agrume-card";
 
@@ -151,23 +182,25 @@
                 }
             });
 
+            const txtRecolte = agrume.recolte.map(m => monthNames[m-1]).join('/');
+
             if (!arbreSurvit) {
                 card.classList.add("status-ko");
                 card.innerHTML = `<strong>❌ ${agrume.nom}</strong><br>
-                    <small>Arbre menacé par le record station (<b>${minAbs}°C</b>).<br>Limite bois : ${agrume.seuil_arbre}°C</small>`;
+                    <small>Le bois ne résiste pas au record station (<b>${minAbs}°C</b>).<br>Limite arbre : ${agrume.seuil_arbre}°C</small>`;
             } else if (alertesRecolte.length > 0) {
                 card.classList.add("status-warning");
                 card.innerHTML = `<strong>⚠️ ${agrume.nom}</strong><br>
-                    <small>Arbre OK, mais <b>fruits menacés</b> en :</small>
+                    <small>Arbre résistant, mais <b>récolte menacée</b> par le gel en :</small>
                     <div style="margin: 8px 0; font-size:0.85em; line-height:1.6;">${alertesRecolte.join(' ')}</div>
-                    <span class="badge badge-fruit">Risque fruit < ${agrume.seuil_fruit}°C</span>`;
+                    <span class="badge badge-recolte">Période : ${txtRecolte}</span>
+                    <span class="badge badge-fruit">Seuil fruit : ${agrume.seuil_fruit}°C</span>`;
             } else {
                 card.classList.add("status-ok");
-                const listeMois = agrume.recolte.map(m => monthNames[m-1]).join('/');
                 card.innerHTML = `<strong>✅ ${agrume.nom}</strong><br>
                     <small>Conditions optimales pour l'arbre et les fruits.</small><br>
-                    <span class="badge badge-recolte">Récolte : ${listeMois}</span>
-                    <span class="badge badge-fruit">Fruit résiste à ${agrume.seuil_fruit}°C</span>`;
+                    <span class="badge badge-recolte">Récolte : ${txtRecolte}</span>
+                    <span class="badge badge-fruit">Seuil fruit : ${agrume.seuil_fruit}°C</span>`;
             }
             container.appendChild(card);
         });
@@ -177,7 +210,7 @@
     legend.onAdd = function () {
         const div = L.DomUtil.create('div', 'legend');
         const grades = [-20, -15, -12, -10, -8, -5, 0];
-        div.innerHTML = '<strong>T. Min Absolue</strong><br>';
+        div.innerHTML = '<strong>Minimales Station</strong><br>';
         for (let i = 0; i < grades.length; i++) {
             div.innerHTML += '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' + grades[i] + '&deg;C<br>';
         }

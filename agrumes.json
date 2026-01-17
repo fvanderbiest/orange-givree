@@ -1,14 +1,146 @@
 [
   {
-    "nom": "Yuzu",
-    "seuil_arbre": -12,
+    "nom": "Yuzu (Citrus junos)",
+    "seuil_arbre": -15,
     "seuil_fruit": -5,
     "recolte": [10, 11, 12]
   },
   {
-    "nom": "Citronnier de Menton",
-    "seuil_arbre": -4,
+    "nom": "Satsuma Owari",
+    "seuil_arbre": -12,
     "seuil_fruit": -3,
-    "recolte": [1, 2, 3, 4, 11, 12]
+    "recolte": [9, 10, 11]
+  },
+  {
+    "nom": "Satsuma Corse",
+    "seuil_arbre": -10,
+    "seuil_fruit": -3,
+    "recolte": [9, 10]
+  },
+  {
+    "nom": "Citrangequat Thomasville",
+    "seuil_arbre": -15,
+    "seuil_fruit": -5,
+    "recolte": [11, 12, 1]
+  },
+  {
+    "nom": "Citrange Remo",
+    "seuil_arbre": -15,
+    "seuil_fruit": -4,
+    "recolte": [10, 11, 12]
+  },
+  {
+    "nom": "Ichang Lemon (Shangyuan)",
+    "seuil_arbre": -15,
+    "seuil_fruit": -4,
+    "recolte": [11, 12]
+  },
+  {
+    "nom": "Citradia 139",
+    "seuil_arbre": -12,
+    "seuil_fruit": -4,
+    "recolte": [11, 12]
+  },
+  {
+    "nom": "USA 119",
+    "seuil_arbre": -12,
+    "seuil_fruit": -4,
+    "recolte": [11, 12]
+  },
+  {
+    "nom": "Mandarine Changsha",
+    "seuil_arbre": -15,
+    "seuil_fruit": -4,
+    "recolte": [11, 12]
+  },
+  {
+    "nom": "Morton Citrange",
+    "seuil_arbre": -15,
+    "seuil_fruit": -4,
+    "recolte": [11, 12]
+  },
+  {
+    "nom": "ClemYuz 2-2",
+    "seuil_arbre": -12,
+    "seuil_fruit": -4,
+    "recolte": [10, 11, 12]
+  },
+  {
+    "nom": "Bigarade de Séville",
+    "seuil_arbre": -10,
+    "seuil_fruit": -3,
+    "recolte": [1, 2, 3]
+  },
+  {
+    "nom": "Bigarade Bouquet de Nice",
+    "seuil_arbre": -10,
+    "seuil_fruit": -3,
+    "recolte": [1, 2, 3]
+  },
+  {
+    "nom": "Kumquat Meiwa",
+    "seuil_arbre": -10,
+    "seuil_fruit": -4,
+    "recolte": [1, 2, 3, 4]
+  },
+  {
+    "nom": "Kumquat Nagami",
+    "seuil_arbre": -10,
+    "seuil_fruit": -4,
+    "recolte": [1, 2, 3, 4]
+  },
+  {
+    "nom": "Limequat Eustis",
+    "seuil_arbre": -8,
+    "seuil_fruit": -2,
+    "recolte": [11, 12, 1, 2]
+  },
+  {
+    "nom": "Kabosu",
+    "seuil_arbre": -12,
+    "seuil_fruit": -4,
+    "recolte": [10, 11]
+  },
+  {
+    "nom": "Sudachi",
+    "seuil_arbre": -12,
+    "seuil_fruit": -4,
+    "recolte": [9, 10]
+  },
+  {
+    "nom": "Tangelo Wekiwa",
+    "seuil_arbre": -9,
+    "seuil_fruit": -3,
+    "recolte": [12, 1, 2]
+  },
+  {
+    "nom": "Amber Sweet",
+    "seuil_arbre": -10,
+    "seuil_fruit": -3,
+    "recolte": [11, 12]
+  },
+  {
+    "nom": "Amoa 8",
+    "seuil_arbre": -10,
+    "seuil_fruit": -3,
+    "recolte": [12, 1, 2]
+  },
+  {
+    "nom": "Auline",
+    "seuil_arbre": -15,
+    "seuil_fruit": -4,
+    "recolte": [10, 11, 12]
+  },
+  {
+    "nom": "Citrange Glen",
+    "seuil_arbre": -12,
+    "seuil_fruit": -4,
+    "recolte": [10, 11]
+  },
+  {
+    "nom": "Poncirus Trifoliata",
+    "seuil_arbre": -20,
+    "seuil_fruit": -10,
+    "recolte": [10, 11]
   }
 ]
