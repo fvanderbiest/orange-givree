@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Agrumes - Rusticité & Récolte</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='leafGradient' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234CAF50;stop-opacity:1' /><stop offset='100%' style='stop-color:%2366BB6A;stop-opacity:1' /></linearGradient><radialGradient id='dropGradient' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'><stop offset='0%' style='stop-color:rgb(255,255,255);stop-opacity:0.9)' /><stop offset='100%' style='stop-color:rgb(173,216,230);stop-opacity:0.6)' /></radialGradient></defs><path d='M 30 70 Q 10 50 40 20 Q 70 5 90 30 Q 80 60 55 85 L 30 70 Z' fill='url(%23leafGradient)'/><circle cx='50' cy='50' r='10' fill='url(%23dropGradient)' stroke='%2387CEEB' stroke-width='1'/></svg>" type="image/svg+xml">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; display: flex; height: 100vh; background: #f0f2f5; }
+
+        #map { flex: 1; height: 100%; background: #cbd5e0; }
+
+        #sidebar {
+            width: 400px;
+            background: #fff;
+            border-left: 1px solid #ddd;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+        }
+
+        h3 { color: #2c3e50; margin-top: 0; border-bottom: 3px solid #27ae60; padding-bottom: 10px; }
+
+        .period-selector {
+            margin: 15px 0; padding: 15px;
+            background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;
+        }
+
+        .agrume-card {
+            padding: 15px; margin-bottom: 15px; border-radius: 8px;
+            background: #fff; border: 1px solid #edf2f7;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .status-ok { border-left: 6px solid #27ae60; }
+        .status-warning { border-left: 6px solid #f1c40f; background: #fffdf0; }
+        .status-ko { border-left: 6px solid #e74c3c; opacity: 0.8; background: #fdf2f2; }
+
+        .temp-tag {
+            background: #fee2e2; padding: 2px 5px; border-radius: 4px;
+            font-family: monospace; font-weight: bold; color: #b91c1c; font-size: 0.9em;
+        }
+
+        .badge {
+            display: inline-block; font-size: 0.75em; padding: 3px 8px;
+            border-radius: 12px; font-weight: bold; margin-top: 8px; margin-right: 5px;
+        }
+        .badge-fruit { background: #e67e22; color: white; }
+        .badge-recolte { background: #3498db; color: white; }
+
+        .legend {
+            padding: 12px; background: white; line-height: 1.6em;
+            border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); font-size: 0.85em;
+        }
+        .legend i { width: 14px; height: 14px; float: left; margin-right: 10px; border-radius: 50%; border: 1px solid #444; }
+
+        select { width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #cbd5e0; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div id="sidebar">
+    <h3>Station : <span id="station-name">Sélectionnez un point</span></h3>
+
+    <div class="period-selector">
+        <label for="period-select"><strong>Référence climatique :</strong></label>
+        <select id="period-select" onchange="refreshView()">
+            <option value="last_5y" selected>Climat récent (5 ans)</option>
+            <option value="last_10y">Tendance (10 ans)</option>
+            <option value="last_20y">Historique (20 ans)</option>
+        </select>
+        <p style="font-size: 0.85em; color: #4a5568; margin-top: 10px;">
+            Min. absolu station : <strong id="min-temp">-</strong>&deg;C
+        </p>
+    </div>
+
+    <hr style="border:0; border-top:1px solid #eee; margin: 20px 0;">
+
+    <div id="agrumes-container">
+        <p style="color: #a0aec0; font-style: italic; text-align: center;">Cliquez sur une station pour lancer l'analyse.</p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    const map = L.map('map').setView([46.5, 2.5], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    let agrumesData = [];
+    let geojsonData = null;
+    let geojsonLayer = null;
+    let currentFeature = null;
+
+    const monthNames = ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sept", "Oct", "Nov", "Déc"];
+
+    function getColor(t) {
+        return t > 0    ? '#00FF00' : t > -5   ? '#ADFF2F' : t > -8   ? '#FFFF00' :
+               t > -10  ? '#FFA500' : t > -12  ? '#FF4500' : t > -15  ? '#FF0000' : '#8B0000';
+    }
+
+    fetch('agrumes.json').then(res => res.json()).then(data => { agrumesData = data; });
+    fetch('stations_temperatures.geojson').then(res => res.json()).then(data => { geojsonData = data; renderMap(); });
+
+    function renderMap() {
+        const period = document.getElementById('period-select').value;
+        if (geojsonLayer) map.removeLayer(geojsonLayer);
+
+        geojsonLayer = L.geoJSON(geojsonData, {
+            filter: (f) => f.properties[period] && f.properties[period].min_absolute !== null,
+            pointToLayer: (f, latlng) => L.circleMarker(latlng, {
+                radius: 8, fillColor: getColor(f.properties[period].min_absolute),
+                color: "#333", weight: 1.5, fillOpacity: 0.9
+            }),
+            onEachFeature: (f, layer) => {
+                layer.on('click', () => { currentFeature = f; updateSidebarContent(); });
+                layer.bindTooltip(`<b>${f.properties.nom}</b>: ${f.properties[period].min_absolute}°C`);
+            }
+        }).addTo(map);
+    }
+
+    function refreshView() { renderMap(); if (currentFeature) updateSidebarContent(); }
+
+    function updateSidebarContent() {
+        const period = document.getElementById('period-select').value;
+        const props = currentFeature.properties;
+        const periodStats = props[period];
+        const minAbs = periodStats.min_absolute;
+
+        document.getElementById('station-name').innerText = props.nom;
+        document.getElementById('min-temp').innerText = minAbs;
+
+        const container = document.getElementById('agrumes-container');
+        container.innerHTML = "";
+
+        agrumesData.forEach(agrume => {
+            const card = document.createElement('div');
+            card.className = "agrume-card";
+
+            const arbreSurvit = minAbs > agrume.seuil_arbre;
+            let alertesRecolte = [];
+
+            agrume.recolte.forEach(m => {
+                const minMois = periodStats.by_month["month_" + m];
+                if (minMois !== null && minMois <= agrume.seuil_fruit) {
+                    alertesRecolte.push(`${monthNames[m-1]} (<span class="temp-tag">${minMois}°C</span>)`);
+                }
+            });
+
+            if (!arbreSurvit) {
+                card.classList.add("status-ko");
+                card.innerHTML = `<strong>❌ ${agrume.nom}</strong><br>
+                    <small>Arbre menacé par le record station (<b>${minAbs}°C</b>).<br>Limite bois : ${agrume.seuil_arbre}°C</small>`;
+            } else if (alertesRecolte.length > 0) {
+                card.classList.add("status-warning");
+                card.innerHTML = `<strong>⚠️ ${agrume.nom}</strong><br>
+                    <small>Arbre OK, mais <b>fruits menacés</b> en :</small>
+                    <div style="margin: 8px 0; font-size:0.85em; line-height:1.6;">${alertesRecolte.join(' ')}</div>
+                    <span class="badge badge-fruit">Risque fruit < ${agrume.seuil_fruit}°C</span>`;
+            } else {
+                card.classList.add("status-ok");
+                const listeMois = agrume.recolte.map(m => monthNames[m-1]).join('/');
+                card.innerHTML = `<strong>✅ ${agrume.nom}</strong><br>
+                    <small>Conditions optimales pour l'arbre et les fruits.</small><br>
+                    <span class="badge badge-recolte">Récolte : ${listeMois}</span>
+                    <span class="badge badge-fruit">Fruit résiste à ${agrume.seuil_fruit}°C</span>`;
+            }
+            container.appendChild(card);
+        });
+    }
+
+    const legend = L.control({position: 'bottomleft'});
+    legend.onAdd = function () {
+        const div = L.DomUtil.create('div', 'legend');
+        const grades = [-20, -15, -12, -10, -8, -5, 0];
+        div.innerHTML = '<strong>T. Min Absolue</strong><br>';
+        for (let i = 0; i < grades.length; i++) {
+            div.innerHTML += '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' + grades[i] + '&deg;C<br>';
+        }
+        return div;
+    };
+    legend.addTo(map);
+</script>
+</body>
+</html>

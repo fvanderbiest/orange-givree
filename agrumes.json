@@ -1,0 +1,14 @@
+[
+  {
+    "nom": "Yuzu",
+    "seuil_arbre": -12,
+    "seuil_fruit": -5,
+    "recolte": [10, 11, 12]
+  },
+  {
+    "nom": "Citronnier de Menton",
+    "seuil_arbre": -4,
+    "seuil_fruit": -3,
+    "recolte": [1, 2, 3, 4, 11, 12]
+  }
+]
