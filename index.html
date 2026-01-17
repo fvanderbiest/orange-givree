@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orange givrée ?</title>
+    <title>Orange givrée - Rusticité & Récolte</title>
 
     <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='leafGradient' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234CAF50;stop-opacity:1' /><stop offset='100%' style='stop-color:%2366BB6A;stop-opacity:1' /></linearGradient><radialGradient id='dropGradient' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'><stop offset='0%' style='stop-color:rgb(255,255,255);stop-opacity:0.9' /><stop offset='100%' style='stop-color:rgb(173,216,230);stop-opacity:0.6' /></radialGradient></defs><path d='M 30 70 Q 10 50 40 20 Q 70 5 90 30 Q 80 60 55 85 L 30 70 Z' fill='url(%23leafGradient)'/><circle cx='50' cy='50' r='10' fill='url(%23dropGradient)' stroke='%2387CEEB' stroke-width='1'/></svg>" type="image/svg+xml">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <style>
-        body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; display: flex; height: 100vh; background: #f8fafc; color: #1e293b; }
+        body { margin: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; display: flex; height: 100vh; background: #f8fafc; color: #1e293b; }
 
         #map { flex: 1; height: 100%; background: #cbd5e1; }
 
@@ -25,12 +25,12 @@
             flex-direction: column;
         }
 
-        h2 { color: #166534; margin: 0 0 15px 0; display: flex; align-items: center; gap: 10px; }
-        h2 span { font-size: 0.8em; color: #15803d; }
+        h2 { color: #c2410c; margin: 0 0 15px 0; display: flex; align-items: center; gap: 10px; }
+        h2 span { font-size: 0.9em; }
 
         .period-selector {
             margin-bottom: 20px; padding: 15px;
-            background: #f1f5f9; border-radius: 12px; border: 1px solid #e2e8f0;
+            background: #fff7ed; border-radius: 12px; border: 1px solid #ffedd5;
         }
 
         #station-info { margin-bottom: 20px; padding: 0 5px; }
@@ -48,7 +48,7 @@
 
         .temp-tag {
             background: #fee2e2; padding: 1px 4px; border-radius: 4px;
-            font-family: ui-monospace, SFMono-Regular, monospace;
+            font-family: ui-monospace, monospace;
             font-weight: 700; color: #991b1b; font-size: 0.85em;
         }
 
@@ -60,14 +60,19 @@
         .badge-fruit { background: #f97316; color: white; }
         .badge-recolte { background: #3b82f6; color: white; }
 
+        /* Légende corrigée avec Flexbox */
         .legend {
-            padding: 12px; background: white; line-height: 1.6em;
-            border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 0.8em;
+            padding: 12px; background: white; border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 0.85em; color: #475569;
         }
-        .legend i { width: 14px; height: 14px; float: left; margin-right: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); }
+        .legend h4 { margin: 0 0 8px 0; color: #1e293b; font-size: 1em; }
+        .legend-item { display: flex; align-items: center; margin-bottom: 5px; }
+        .legend-item i {
+            width: 14px; height: 14px; margin-right: 10px;
+            border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0;
+        }
 
-        select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; margin-top: 8px; font-size: 0.9em; background: white; cursor: pointer; }
-
+        select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #fed7aa; margin-top: 8px; font-size: 0.9em; background: white; cursor: pointer; }
         hr { border: 0; border-top: 1px solid #f1f5f9; margin: 20px 0; }
     </style>
 </head>
@@ -76,24 +81,24 @@
 <div id="map"></div>
 
 <div id="sidebar">
-    <h2>Orange givrée <span>🍊</span></h2>
+    <h2>Orange givrée <span>❄️🍊</span></h2>
 
     <div id="station-info">
         <span id="station-name">Sélectionnez une station</span><br>
-        <small id="min-display" style="color: #64748b;">Record de froid : - °C</small>
+        <small id="min-display" style="color: #64748b;">Analyse des données Météo-France</small>
     </div>
 
     <div class="period-selector">
-        <label for="period-select"><strong>Analyse climatique :</strong></label>
+        <label for="period-select"><strong>Fenêtre d'analyse :</strong></label>
         <select id="period-select" onchange="refreshView()">
-            <option value="last_5y" selected>Climat récent (5 ans)</option>
-            <option value="last_10y">Tendance (10 ans)</option>
-            <option value="last_20y">Historique (20 ans)</option>
+            <option value="last_5y" selected>Climat récent (5 dernières années)</option>
+            <option value="last_10y">Tendance (10 dernières années)</option>
+            <option value="last_20y">Historique (20 dernières années)</option>
         </select>
     </div>
 
     <div id="agrumes-container">
-        <p style="color: #94a3b8; font-style: italic; text-align: center; margin-top: 40px;">Cliquez sur un point de la carte pour analyser les variétés possibles sur ce terroir.</p>
+        <p style="color: #94a3b8; font-style: italic; text-align: center; margin-top: 40px;">Cliquez sur un point de la carte pour découvrir les variétés adaptées à ce micro-climat.</p>
     </div>
 </div>
 
@@ -152,7 +157,7 @@
         const container = document.getElementById('agrumes-container');
         container.innerHTML = "";
 
-        // --- Logique de Tri par Priorité ---
+        // Tri par priorité (1: OK total, 2: Risque fruit, 3: Mort arbre)
         const sortedAgrumes = [...agrumesData].sort((a, b) => {
             const getPriority = (agr) => {
                 const survit = minAbs > agr.seuil_arbre;
@@ -167,7 +172,6 @@
             return getPriority(a) - getPriority(b);
         });
 
-        // --- Génération des cartes ---
         sortedAgrumes.forEach(agrume => {
             const card = document.createElement('div');
             card.className = "agrume-card";
@@ -187,32 +191,39 @@
             if (!arbreSurvit) {
                 card.classList.add("status-ko");
                 card.innerHTML = `<strong>❌ ${agrume.nom}</strong><br>
-                    <small>Le bois ne résiste pas au record station (<b>${minAbs}°C</b>).<br>Limite arbre : ${agrume.seuil_arbre}°C</small>`;
+                    <small>Gel létal pour le bois (Record : ${minAbs}°C).<br>Seuil de résistance : ${agrume.seuil_arbre}°C</small>`;
             } else if (alertesRecolte.length > 0) {
                 card.classList.add("status-warning");
                 card.innerHTML = `<strong>⚠️ ${agrume.nom}</strong><br>
-                    <small>Arbre résistant, mais <b>récolte menacée</b> par le gel en :</small>
+                    <small>Arbre OK, mais <b>fruits menacés</b> en :</small>
                     <div style="margin: 8px 0; font-size:0.85em; line-height:1.6;">${alertesRecolte.join(' ')}</div>
-                    <span class="badge badge-recolte">Période : ${txtRecolte}</span>
-                    <span class="badge badge-fruit">Seuil fruit : ${agrume.seuil_fruit}°C</span>`;
+                    <span class="badge badge-recolte">Récolte : ${txtRecolte}</span>
+                    <span class="badge badge-fruit">Gel fruit < ${agrume.seuil_fruit}°C</span>`;
             } else {
                 card.classList.add("status-ok");
                 card.innerHTML = `<strong>✅ ${agrume.nom}</strong><br>
-                    <small>Conditions optimales pour l'arbre et les fruits.</small><br>
-                    <span class="badge badge-recolte">Récolte : ${txtRecolte}</span>
-                    <span class="badge badge-fruit">Seuil fruit : ${agrume.seuil_fruit}°C</span>`;
+                    <small>Récolte et arbre sécurisés sur cette période.</small><br>
+                    <span class="badge badge-recolte">Période : ${txtRecolte}</span>
+                    <span class="badge badge-fruit">Fruit résiste à ${agrume.seuil_fruit}°C</span>`;
             }
             container.appendChild(card);
         });
     }
 
+    // Légende améliorée
     const legend = L.control({position: 'bottomleft'});
     legend.onAdd = function () {
         const div = L.DomUtil.create('div', 'legend');
         const grades = [-20, -15, -12, -10, -8, -5, 0];
-        div.innerHTML = '<strong>Minimales Station</strong><br>';
+        div.innerHTML = '<h4>Minimales Station</h4>';
         for (let i = 0; i < grades.length; i++) {
-            div.innerHTML += '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' + grades[i] + '&deg;C<br>';
+            const color = getColor(grades[i] + 1);
+            const label = grades[i+1] ? `${grades[i]} à ${grades[i+1]}°C` : `> ${grades[i]}°C`;
+            div.innerHTML += `
+                <div class="legend-item">
+                    <i style="background: ${color}"></i>
+                    <span>${label}</span>
+                </div>`;
         }
         return div;
     };
