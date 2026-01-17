@@ -133,12 +133,35 @@
         geojsonLayer = L.geoJSON(geojsonData, {
             filter: (f) => f.properties[period] && f.properties[period].min_absolute !== null,
             pointToLayer: (f, latlng) => L.circleMarker(latlng, {
-                radius: 8, fillColor: getColor(f.properties[period].min_absolute),
-                color: "#fff", weight: 0.8, fillOpacity: 0.9
+                radius: 8,
+                fillColor: getColor(f.properties[period].min_absolute),
+                color: "#fff",
+                weight: 0.8,
+                fillOpacity: 0.9
             }),
             onEachFeature: (f, layer) => {
-                layer.on('click', () => { currentFeature = f; updateSidebarContent(); });
-                layer.bindTooltip(`<b>${f.properties.nom}</b>: ${f.properties[period].min_absolute}°C`);
+                // Effet au survol
+                layer.on('mouseover', function (e) {
+                    this.setRadius(12); // Le point grossit
+                    this.setStyle({ weight: 2 }); // Le liseré s'épaissit
+                });
+
+                // Retour à l'état normal
+                layer.on('mouseout', function (e) {
+                    this.setRadius(8);
+                    this.setStyle({ weight: 0.8 });
+                });
+
+                // Sélection au clic
+                layer.on('click', () => {
+                    currentFeature = f;
+                    updateSidebarContent();
+                });
+
+                layer.bindTooltip(`<b>${f.properties.nom}</b>: ${f.properties[period].min_absolute}°C`, {
+                    direction: 'top',
+                    offset: [0, -10]
+                });
             }
         }).addTo(map);
     }
