@@ -28,7 +28,6 @@
         #station-name { color: #1e293b; font-weight: 800; font-size: 1.1em; display: block; }
         #search-container { margin-bottom: 15px; display: none; }
         #search-input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0; box-sizing: border-box; font-size: 0.9rem; outline: none; }
-        #search-input:focus { border-color: var(--primary); }
 
         .agrume-card { padding: 14px; margin-bottom: 10px; border-radius: 10px; background: var(--white); border: 1px solid #f1f5f9; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .status-ok { border-left: 5px solid #16a34a; background: #f0fdf4; }
@@ -45,13 +44,11 @@
         .m-grey { background-color: #94a3b8; }
 
         .limits-tag { font-size: 0.75rem; color: #94a3b8; font-weight: 400; margin-left: 8px; white-space: nowrap; }
-
-        .legend { padding: 10px; background: var(--white); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-size: 0.75rem; }
+        .legend { padding: 10px; background: var(--white); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-size: 0.75rem; line-height: 1.5; }
         .legend-item { display: flex; align-items: center; margin-bottom: 3px; }
         .legend-item i { width: 12px; height: 12px; margin-right: 8px; border-radius: 50%; flex-shrink: 0; }
 
         .source-mention { font-size: 0.7rem; color: #94a3b8; margin-top: auto; padding-top: 15px; text-align: center; }
-        .source-mention a { color: #3b82f6; text-decoration: none; }
         select { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #fed7aa; margin-top: 5px; cursor: pointer; font-size: 0.9rem; }
     </style>
 </head>
@@ -74,7 +71,7 @@
     </div>
     <div id="station-info">
         <span id="station-name">Choisir une station sur la carte</span>
-        <small id="min-display" style="color: #64748b;">Analyse des minimales absolues</small>
+        <small id="min-display" style="color: #64748b;"></small>
     </div>
     <div id="search-container">
         <input type="text" id="search-input" placeholder="Filtrer les variétés..." oninput="updateSidebarContent()">
@@ -95,31 +92,47 @@
     }).addTo(map);
 
     let agrumesData = [];
-    let geojsonData = null, geojsonLayer = null, currentFeature = null;
+    let geojsonData = null;
+    let geojsonLayer = null;
+    let currentFeature = null;
     const monthNames = ["Jan", "Fév", "Mar", "Avr", "Mai", "Jun", "Jul", "Août", "Sep", "Oct", "Nov", "Déc"];
 
-    function getColor(t) {
+    function getMarkerColor(t) {
+        if (t === null || t === undefined) return '#94a3b8';
         return t > 0 ? '#16a34a' : t > -5 ? '#84cc16' : t > -8 ? '#eab308' : t > -10 ? '#f97316' : t > -12 ? '#ef4444' : t > -15 ? '#dc2626' : '#7f1d1d';
     }
 
-    fetch('agrumes.json').then(res => res.json()).then(data => { agrumesData = data; });
-    fetch('stations_temperatures.geojson').then(res => res.json()).then(data => { geojsonData = data; renderMap(); });
+    // Chargement sécurisé
+    Promise.all([
+        fetch('agrumes.json').then(res => res.json()),
+        fetch('stations_temperatures.geojson').then(res => res.json())
+    ]).then(([agrumes, geojson]) => {
+        agrumesData = agrumes;
+        geojsonData = geojson;
+        renderMap();
+    }).catch(err => console.error("Erreur de chargement :", err));
 
     function renderMap() {
+        if (!geojsonData) return;
         const period = document.getElementById('period-select').value;
         if (geojsonLayer) map.removeLayer(geojsonLayer);
+
         geojsonLayer = L.geoJSON(geojsonData, {
-            filter: (f) => f.properties[period] && f.properties[period].min_absolute !== null,
-            pointToLayer: (f, latlng) => L.circleMarker(latlng, { radius: 8, fillColor: getColor(f.properties[period].min_absolute), color: "#fff", weight: 0.8, fillOpacity: 0.9 }),
+            filter: f => f.properties && f.properties[period] && f.properties[period].min_absolute !== null,
+            pointToLayer: (f, latlng) => L.circleMarker(latlng, {
+                radius: 8,
+                fillColor: getMarkerColor(f.properties[period].min_absolute),
+                color: "#fff",
+                weight: 1,
+                fillOpacity: 0.9
+            }),
             onEachFeature: (f, layer) => {
-                layer.on('mouseover', function() { this.setRadius(12); this.setStyle({weight: 2}); });
-                layer.on('mouseout', function() { this.setRadius(8); this.setStyle({weight: 0.8}); });
                 layer.on('click', () => {
                     currentFeature = f;
                     document.getElementById('search-container').style.display = 'block';
                     updateSidebarContent();
                 });
-                layer.bindTooltip(`<b>${f.properties.nom}</b>`, {direction:'top'});
+                layer.bindTooltip(`<b>${f.properties.nom || 'Station inconnue'}</b>`, {direction:'top'});
             }
         }).addTo(map);
     }
@@ -127,10 +140,11 @@
     function refreshView() { renderMap(); if (currentFeature) updateSidebarContent(); }
 
     function updateSidebarContent() {
-        if (!currentFeature) return;
+        if (!currentFeature || !currentFeature.properties) return;
         const period = document.getElementById('period-select').value;
-        const props = currentFeature.properties;
-        const periodStats = props[period];
+        const periodStats = currentFeature.properties[period];
+        if (!periodStats) return;
+
         const minAbs = periodStats.min_absolute;
         const searchQuery = document.getElementById('search-input').value.toLowerCase();
         const container = document.getElementById('agrumes-container');
@@ -140,86 +154,61 @@
             .filter(agr => agr.nom.toLowerCase().includes(searchQuery))
             .map(agr => {
                 const survitArbre = minAbs > agr.seuil_arbre;
-                let moisDonnees = [];
-                let forceRed = false, forceOrange = false, gelesSeverement = false;
-                let gelesTotalCount = 0, sainsTotalCount = 0;
+                let moisBadges = [];
+                let cumulGelRouge = false;
+                let cumulGelOrange = false;
 
-                const checkMonths = (targetMonth) => {
-                    const months = [];
-                    let curr = 9;
-                    while (curr !== targetMonth) {
-                        months.push(curr);
-                        curr = (curr % 12) + 1;
-                    }
-                    return months;
-                };
+                const fullYearCycle = [9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8];
+                fullYearCycle.forEach(m => {
+                    const tMin = periodStats.by_month ? periodStats.by_month["month_" + m] : null;
+                    const estDansRecolte = agr.recolte.includes(m);
 
-                agr.recolte.forEach(m => {
-                    const precursors = checkMonths(m);
-                    precursors.forEach(p => {
-                        const tPrev = periodStats.by_month["month_" + p];
-                        if (tMinPresent(tPrev)) {
-                            if (tPrev < (agr.seuil_fruit - 2)) { forceRed = true; gelesSeverement = true; }
-                            else if (tPrev < (agr.seuil_fruit - 1)) { forceRed = true; }
-                            else if (tMinApproached(tPrev, agr.seuil_fruit)) { forceOrange = true; }
-                        }
-                    });
-
-                    const tMin = periodStats.by_month["month_" + m];
-                    let currentStatus = "green";
-                    if (tMinPresent(tMin)) {
-                        if (tMin < (agr.seuil_fruit - 2)) { currentStatus = "red"; gelesSeverement = true; }
-                        else if (tMin < (agr.seuil_fruit - 1)) currentStatus = "red";
-                        else if (tMinApproached(tMin, agr.seuil_fruit)) currentStatus = "orange";
+                    if (tMin !== null) {
+                        if (tMin < (agr.seuil_fruit - 1)) cumulGelRouge = true;
+                        else if (tMin >= (agr.seuil_fruit - 1) && tMin <= (agr.seuil_fruit + 1)) cumulGelOrange = true;
                     }
 
-                    if (forceRed) currentStatus = "red";
-                    else if (forceOrange && currentStatus === "green") currentStatus = "orange";
-
-                    if (currentStatus === "red") gelesTotalCount++;
-                    if (currentStatus === "green") sainsTotalCount++;
-                    moisDonnees.push({ name: monthNames[m-1], temp: tMin, color: `m-${currentStatus}` });
+                    if (estDansRecolte) {
+                        let color = "m-green";
+                        if (cumulGelRouge) color = "m-red";
+                        else if (cumulGelOrange) color = "m-orange";
+                        moisBadges.push({ month: m, name: monthNames[m-1], temp: tMin, color });
+                    }
                 });
 
                 let statut = "ok", priorite = 1;
+                const debutRecolte = moisBadges[0];
+                const tousVerts = moisBadges.every(b => b.color === "m-green");
+                const aDuFroidSeverement = moisBadges.some(b => b.temp !== null && b.temp < (agr.seuil_fruit - 2));
+
                 if (!survitArbre) { statut = "ko"; priorite = 4; }
-                else if (gelesTotalCount === 0 && sainsTotalCount === agr.recolte.length) { statut = "ok"; priorite = 1; }
-                else if (sainsTotalCount > 0) { statut = "early"; priorite = 2; }
-                else { statut = "warning"; priorite = 3; }
+                else if (tousVerts) { statut = "ok"; priorite = 1; }
+                else if (debutRecolte && (debutRecolte.color === "m-green" || debutRecolte.color === "m-orange")) {
+                    statut = "early"; priorite = 2;
+                } else { statut = "warning"; priorite = 3; }
 
-                return { ...agr, statut, priorite, moisDonnees, gelesSeverement };
+                return { ...agr, statut, priorite, moisBadges, aDuFroidSeverement };
             })
-            .sort((a, b) => (a.priorite !== b.priorite) ? a.priorite - b.priorite : a.seuil_arbre - b.seuil_arbre);
+            .sort((a, b) => a.priorite - b.priorite || a.seuil_arbre - b.seuil_arbre);
 
-        function tMinPresent(t) { return t !== undefined && t !== null; }
-        function tMinApproached(t, seuil) { return t >= (seuil - 1) && t <= (seuil + 1); }
-
-        document.getElementById('station-name').innerText = props.nom;
+        document.getElementById('station-name').innerText = currentFeature.properties.nom || 'Station';
         document.getElementById('min-display').innerText = `Record local : ${minAbs}°C`;
 
         processed.forEach(agr => {
             const card = document.createElement('div');
             card.className = `agrume-card status-${agr.statut}`;
-            let badgesHtml = '<div class="month-badges-container">';
-            agr.moisDonnees.forEach(m => {
-                const tempDisplay = (m.temp !== undefined && m.temp !== null) ? `${m.temp}°` : '';
-                badgesHtml += `<div class="m-badge ${m.color}"><span>${m.name}</span><span class="m-temp">${tempDisplay}</span></div>`;
-            });
-            badgesHtml += '</div>';
-
-            let msg = (agr.statut === "ko") ? `Variété non adaptée.` :
-                      (agr.statut === "ok") ? `Variété adaptée.` :
-                      (agr.statut === "early") ? `Récolte partielle possible.` :
-                      (agr.gelesSeverement) ? `Fruits systématiquement gelés.` : `Récolte compromise par le gel.`;
+            let msg = (agr.statut === "ko") ? "Variété non adaptée" :
+                      (agr.statut === "ok") ? "Variété adaptée" :
+                      (agr.statut === "early") ? "Récolte précoce impérative" :
+                      (agr.aDuFroidSeverement) ? "Récolte impossible (gel total)" : "Risque de gel (surveillance nécessaire)";
 
             card.innerHTML = `
                 <div style="display:flex; justify-content:space-between; align-items: baseline;">
                     <strong>${agr.nom.split('(')[0]}</strong>
                     <span class="limits-tag">Arbre : ${agr.seuil_arbre}° | Fruits : ${agr.seuil_fruit}°</span>
                 </div>
-                <small>${msg}</small>
-                ${badgesHtml}
-            `;
+                <small style="color: #64748b;">${msg}</small>
+                <div class="month-badges-container">${agr.moisBadges.map(m => `<div class="m-badge ${m.color}"><span>${m.name}</span><span class="m-temp">${m.temp !== null ? m.temp+'°' : ''}</span></div>`).join('')}</div>`;
             container.appendChild(card);
         });
     }
@@ -228,10 +217,10 @@
     legend.onAdd = function () {
         const div = L.DomUtil.create('div', 'legend');
         const grades = [-20, -15, -12, -10, -8, -5, 0];
-        div.innerHTML = '<b>Minimales</b><br>';
+        div.innerHTML = '<b>Minimales Absolues</b><br>';
         for (let i = 0; i < grades.length; i++) {
-            const color = getColor(grades[i] + 1);
-            div.innerHTML += `<div class="legend-item"><i style="background: ${color}"></i><span>${grades[i+1] ? grades[i]+'°' : '>'+grades[i]+'°'}</span></div>`;
+            const color = getMarkerColor(grades[i] + 1);
+            div.innerHTML += `<div class="legend-item"><i style="background: ${color}"></i><span>${grades[i+1] ? grades[i]+' à '+grades[i+1] : '> '+grades[i]}°C</span></div>`;
         }
         return div;
     };
