@@ -197,7 +197,7 @@
         processed.forEach(agr => {
             const card = document.createElement('div');
             card.className = `agrume-card status-${agr.statut}`;
-            let msg = (agr.statut === "ko") ? "Variété non adaptée" :
+            let msg = (agr.statut === "ko") ? "Variété non adaptée en pleine terre" :
                       (agr.statut === "ok") ? "Variété adaptée" :
                       (agr.statut === "early") ? "Récolte précoce impérative" :
                       (agr.aDuFroidSeverement) ? "Récolte impossible (gel total)" : "Risque de gel (surveillance nécessaire)";
