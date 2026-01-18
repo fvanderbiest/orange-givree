@@ -37,18 +37,19 @@
 
         .intro-text { font-size: 0.85rem; line-height: 1.4; color: #64748b; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; }
 
-        .controls-group { margin-bottom: 15px; }
-        .period-selector { padding: 12px; background: #fff7ed; border-radius: 12px; border: 1px solid #ffedd5; margin-bottom: 10px; }
+        .period-selector { padding: 12px; background: #fff7ed; border-radius: 12px; border: 1px solid #ffedd5; margin-bottom: 15px; }
 
+        #station-info { margin-bottom: 15px; padding: 12px; background: #f1f5f9; border-radius: 12px; border: 1px solid #e2e8f0; }
+        #station-name { color: #1e293b; font-weight: 800; font-size: 1.1em; display: block; }
+
+        /* Conteneur de recherche positionné sous la station */
         #search-container { margin-bottom: 15px; display: none; }
         #search-input {
             width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0;
             box-sizing: border-box; font-size: 0.9rem; outline: none; transition: border-color 0.2s;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
         }
         #search-input:focus { border-color: var(--primary); }
-
-        #station-info { margin-bottom: 15px; padding: 12px; background: #f1f5f9; border-radius: 12px; border: 1px solid #e2e8f0; }
-        #station-name { color: #1e293b; font-weight: 800; font-size: 1.1em; display: block; }
 
         .agrume-card {
             padding: 14px; margin-bottom: 10px; border-radius: 10px;
@@ -99,24 +100,22 @@
         Elle permet de vérifier si une variété peut survivre à votre climat et si ses fruits pourront être récoltés avant les grands froids.
     </div>
 
-    <div class="controls-group">
-        <div class="period-selector">
-            <label for="period-select"><small><b>FENÊTRE D'ANALYSE :</b></small></label>
-            <select id="period-select" onchange="refreshView()">
-                <option value="last_5y" selected>Climat récent (5 ans)</option>
-                <option value="last_10y">Tendance (10 ans)</option>
-                <option value="last_20y">Historique (20 ans)</option>
-            </select>
-        </div>
-
-        <div id="search-container">
-            <input type="text" id="search-input" placeholder="Rechercher une variété..." oninput="updateSidebarContent()">
-        </div>
+    <div class="period-selector">
+        <label for="period-select"><small><b>FENÊTRE D'ANALYSE :</b></small></label>
+        <select id="period-select" onchange="refreshView()">
+            <option value="last_5y" selected>Climat récent (5 ans)</option>
+            <option value="last_10y">Tendance (10 ans)</option>
+            <option value="last_20y">Historique (20 ans)</option>
+        </select>
     </div>
 
     <div id="station-info">
         <span id="station-name">Choisir une station sur la carte</span>
         <small id="min-display" style="color: #64748b;">Analyse des minimales absolues</small>
+    </div>
+
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Filtrer les variétés (ex: Yuzu, Satsuma...)" oninput="updateSidebarContent()">
     </div>
 
     <div id="agrumes-container">
