@@ -1,146 +1,102 @@
 [
-  {
-    "nom": "Yuzu (Citrus junos)",
-    "seuil_arbre": -15,
-    "seuil_fruit": -5,
-    "recolte": [10, 11, 12]
-  },
-  {
-    "nom": "Satsuma Owari",
-    "seuil_arbre": -12,
-    "seuil_fruit": -3,
-    "recolte": [9, 10, 11]
-  },
-  {
-    "nom": "Satsuma Corse",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [9, 10]
-  },
-  {
-    "nom": "Citrangequat Thomasville",
-    "seuil_arbre": -15,
-    "seuil_fruit": -5,
-    "recolte": [11, 12, 1]
-  },
-  {
-    "nom": "Citrange Remo",
-    "seuil_arbre": -15,
-    "seuil_fruit": -4,
-    "recolte": [10, 11, 12]
-  },
-  {
-    "nom": "Ichang Lemon (Shangyuan)",
-    "seuil_arbre": -15,
-    "seuil_fruit": -4,
-    "recolte": [11, 12]
-  },
-  {
-    "nom": "Citradia 139",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [11, 12]
-  },
-  {
-    "nom": "USA 119",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [11, 12]
-  },
-  {
-    "nom": "Mandarine Changsha",
-    "seuil_arbre": -15,
-    "seuil_fruit": -4,
-    "recolte": [11, 12]
-  },
-  {
-    "nom": "Morton Citrange",
-    "seuil_arbre": -15,
-    "seuil_fruit": -4,
-    "recolte": [11, 12]
-  },
-  {
-    "nom": "ClemYuz 2-2",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [10, 11, 12]
-  },
-  {
-    "nom": "Bigarade de Séville",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [1, 2, 3]
-  },
-  {
-    "nom": "Bigarade Bouquet de Nice",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [1, 2, 3]
-  },
-  {
-    "nom": "Kumquat Meiwa",
-    "seuil_arbre": -10,
-    "seuil_fruit": -4,
-    "recolte": [1, 2, 3, 4]
-  },
-  {
-    "nom": "Kumquat Nagami",
-    "seuil_arbre": -10,
-    "seuil_fruit": -4,
-    "recolte": [1, 2, 3, 4]
-  },
-  {
-    "nom": "Limequat Eustis",
-    "seuil_arbre": -8,
-    "seuil_fruit": -2,
-    "recolte": [11, 12, 1, 2]
-  },
-  {
-    "nom": "Kabosu",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [10, 11]
-  },
-  {
-    "nom": "Sudachi",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [9, 10]
-  },
-  {
-    "nom": "Tangelo Wekiwa",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [12, 1, 2]
-  },
-  {
-    "nom": "Amber Sweet",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [11, 12]
-  },
-  {
-    "nom": "Amoa 8",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [12, 1, 2]
-  },
-  {
-    "nom": "Auline",
-    "seuil_arbre": -15,
-    "seuil_fruit": -4,
-    "recolte": [10, 11, 12]
-  },
-  {
-    "nom": "Citrange Glen",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [10, 11]
-  },
-  {
-    "nom": "Poncirus Trifoliata",
-    "seuil_arbre": -20,
-    "seuil_fruit": -10,
-    "recolte": [10, 11]
-  }
+  { "nom": "Yuzu (Citrus junos)", "seuil_arbre": -15, "seuil_fruit": -5, "recolte": [10, 11, 12] },
+  { "nom": "Satsuma Owari", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [9, 10, 11] },
+  { "nom": "Satsuma Owari SRA145 Corse", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11] },
+  { "nom": "Satsuma Belabela", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11] },
+  { "nom": "Satsuma Hashimoto", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [9, 10] },
+  { "nom": "Satsuma Okitsu", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [9, 10] },
+  { "nom": "Satsuma Miyagawa", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [9, 10] },
+  { "nom": "Satsuma Kuno", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11] },
+  { "nom": "Satsuma Planchon", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11, 12] },
+  { "nom": "Satsuma Silverhill", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [11, 12] },
+  { "nom": "Citrangequat Thomasville", "seuil_arbre": -15, "seuil_fruit": -5, "recolte": [11, 12, 1] },
+  { "nom": "Citrange Remo", "seuil_arbre": -15, "seuil_fruit": -4, "recolte": [10, 11, 12] },
+  { "nom": "Citrange Morton", "seuil_arbre": -15, "seuil_fruit": -4, "recolte": [11, 12] },
+  { "nom": "Citrange Glen", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11] },
+  { "nom": "Citrange Sanford", "seuil_arbre": -15, "seuil_fruit": -4, "recolte": [11, 12] },
+  { "nom": "Citrange Troyer", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12, 1] },
+  { "nom": "Citrange Carrizo", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12, 1] },
+  { "nom": "Citrange Rusk", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11] },
+  { "nom": "Ichang Lemon (Shangyuan)", "seuil_arbre": -15, "seuil_fruit": -4, "recolte": [11, 12] },
+  { "nom": "Citradia 139", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12] },
+  { "nom": "USA 119", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12] },
+  { "nom": "Mandarine Changsha", "seuil_arbre": -15, "seuil_fruit": -4, "recolte": [11, 12] },
+  { "nom": "Mandarine Keraji", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11] },
+  { "nom": "Mandarine Shekwasha", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [10, 11, 12] },
+  { "nom": "Mandarine Tiandai", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11] },
+  { "nom": "Mandarine Kinokuni", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [11, 12] },
+  { "nom": "ClemYuz 2-2", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11, 12] },
+  { "nom": "Bigarade de Séville", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2, 3] },
+  { "nom": "Bigarade Bouquet de Nice", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2, 3] },
+  { "nom": "Bigarade Dolce del Gargano", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2] },
+  { "nom": "Bigarade du Vatican", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2, 3] },
+  { "nom": "Bigarade Striatta Bizzaria", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2, 3] },
+  { "nom": "Bigarade Apepu", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2] },
+  { "nom": "Bigarade Corniculata", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2, 3] },
+  { "nom": "Kumquat Meiwa", "seuil_arbre": -10, "seuil_fruit": -4, "recolte": [1, 2, 3, 4] },
+  { "nom": "Kumquat Nagami", "seuil_arbre": -10, "seuil_fruit": -4, "recolte": [1, 2, 3, 4] },
+  { "nom": "Kumquat Obovata", "seuil_arbre": -10, "seuil_fruit": -4, "recolte": [1, 2, 3, 4] },
+  { "nom": "Kumquat Marumi", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [1, 2, 3] },
+  { "nom": "Kumquat Centennial", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2, 3, 4] },
+  { "nom": "Kabosu", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11] },
+  { "nom": "Sudachi", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [9, 10] },
+  { "nom": "Tangelo Wekiwa", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1, 2] },
+  { "nom": "Tangelo Nova", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1] },
+  { "nom": "Amber Sweet", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [11, 12] },
+  { "nom": "Amoa 8", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2] },
+  { "nom": "Auline", "seuil_arbre": -15, "seuil_fruit": -4, "recolte": [10, 11, 12] },
+  { "nom": "Citron Meyer", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [1, 2, 3, 10, 11, 12] },
+  { "nom": "Poncirus Trifoliata", "seuil_arbre": -20, "seuil_fruit": -10, "recolte": [10, 11] },
+  { "nom": "Poncirus Flying Dragon", "seuil_arbre": -20, "seuil_fruit": -10, "recolte": [10, 11] },
+  { "nom": "Orange Fragola", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1, 2] },
+  { "nom": "Orange Sanguine Moro", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2] },
+  { "nom": "Orange Tarocco", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2, 3] },
+  { "nom": "Orange Skaggs Bonanza", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12] },
+  { "nom": "Calamondin", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2, 3, 4, 10, 11, 12] },
+  { "nom": "Limequat Eustis", "seuil_arbre": -8, "seuil_fruit": -2, "recolte": [11, 12, 1, 2] },
+  { "nom": "Eremocitrus glauca", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [8, 9] },
+  { "nom": "Faustrime", "seuil_arbre": -6, "seuil_fruit": -2, "recolte": [8, 9, 10, 11] },
+  { "nom": "Microcitrus Australasica (Rouge)", "seuil_arbre": -6, "seuil_fruit": -2, "recolte": [9, 10, 11, 12] },
+  { "nom": "Sanford Citrange", "seuil_arbre": -15, "seuil_fruit": -4, "recolte": [11, 12] },
+  { "nom": "Trifeola", "seuil_arbre": -15, "seuil_fruit": -4, "recolte": [10, 11] },
+  { "nom": "Clymenia polyandra", "seuil_arbre": -8, "seuil_fruit": -2, "recolte": [11, 12] },
+  { "nom": "Citrangequat Sinton", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [12, 1, 2] },
+  { "nom": "Citrumelo 4475", "seuil_arbre": -15, "seuil_fruit": -5, "recolte": [10, 11] },
+  { "nom": "Citrandarin", "seuil_arbre": -15, "seuil_fruit": -4, "recolte": [10, 11] },
+  { "nom": "Natsudaidai", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [3, 4, 5] },
+  { "nom": "Hassaku", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [2, 3] },
+  { "nom": "Hyuganatsu", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [3, 4] },
+  { "nom": "Shikuwasa", "seuil_arbre": -10, "seuil_fruit": -2, "recolte": [9, 10, 11] },
+  { "nom": "Kinkoji", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2] },
+  { "nom": "Sanbokan", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [2, 3, 4] },
+  { "nom": "Jabara", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12] },
+  { "nom": "Yuko", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12] },
+  { "nom": "Naoshichi", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11] },
+  { "nom": "Hanayu", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11] },
+  { "nom": "Miewa Kumquat", "seuil_arbre": -10, "seuil_fruit": -4, "recolte": [1, 2, 3, 4] },
+  { "nom": "Indio Mandarinquat", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2, 3] },
+  { "nom": "Nippon Orangequat", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2] },
+  { "nom": "Kucle", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12, 1, 2] },
+  { "nom": "Procimequat", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1, 2] },
+  { "nom": "Lime de Palestine", "seuil_arbre": -8, "seuil_fruit": -2, "recolte": [11, 12, 1] },
+  { "nom": "Citron de Menton", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+  { "nom": "Citron Doux de Rome", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [11, 12, 1, 2] },
+  { "nom": "Citron Bergamote", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [12, 1, 2] },
+  { "nom": "Bergamote Fantastico", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2] },
+  { "nom": "Cédrat de Florence", "seuil_arbre": -6, "seuil_fruit": -2, "recolte": [10, 11, 12] },
+  { "nom": "Orange de Oullins", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [1, 2] },
+  { "nom": "Orange Maltaise Demi-Sanguine", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [2, 3, 4] },
+  { "nom": "Pomelo Duncan", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [2, 3, 4, 5] },
+  { "nom": "Pomelo Henderson", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [3, 4, 5] },
+  { "nom": "Tangelo Minneola", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2, 3] },
+  { "nom": "Tangelo Orlando", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1] },
+  { "nom": "Ugli", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2, 3] },
+  { "nom": "Clémentine de Corse", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12, 1] },
+  { "nom": "Clémentine Rubino", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [1, 2] },
+  { "nom": "Mandarine de Blidah", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1] },
+  { "nom": "Mandarine Tardivo di Ciaculli", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [2, 3] },
+  { "nom": "Citron Caviar (Sanguineus)", "seuil_arbre": -6, "seuil_fruit": -2, "recolte": [10, 11, 12] },
+  { "nom": "Citron Caviar (Alstonville)", "seuil_arbre": -6, "seuil_fruit": -2, "recolte": [9, 10, 11] },
+  { "nom": "Citrumelo de Batumi", "seuil_arbre": -15, "seuil_fruit": -5, "recolte": [10, 11] },
+  { "nom": "Bigarade à feuilles de Myrte (Chinotto)", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [1, 2, 3] }
 ]

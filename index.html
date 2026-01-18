@@ -10,84 +10,42 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <style>
-        body { margin: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; display: flex; height: 100vh; background: #f8fafc; color: #1e293b; }
-
+        body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; display: flex; height: 100vh; background: #f8fafc; color: #1e293b; }
         #map { flex: 1; height: 100%; background: #cbd5e1; }
-
-        #sidebar {
-            width: 420px;
-            background: #fff;
-            border-left: 1px solid #e2e8f0;
-            padding: 20px;
-            overflow-y: auto;
-            box-shadow: -4px 0 20px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-        }
-
+        #sidebar { width: 420px; background: #fff; border-left: 1px solid #e2e8f0; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; }
         h2 { color: #c2410c; margin: 0 0 15px 0; display: flex; align-items: center; gap: 10px; }
-        h2 span { font-size: 0.9em; }
 
-        .period-selector {
-            margin-bottom: 20px; padding: 15px;
-            background: #fff7ed; border-radius: 12px; border: 1px solid #ffedd5;
-        }
+        .period-selector { margin-bottom: 15px; padding: 15px; background: #fff7ed; border-radius: 12px; border: 1px solid #ffedd5; }
+        #station-info { margin-bottom: 20px; padding: 15px; background: #f1f5f9; border-radius: 12px; border: 1px solid #e2e8f0; }
+        #station-name { color: #1e293b; font-weight: 800; font-size: 1.1em; display: block; margin-bottom: 5px;}
 
-        #station-info { margin-bottom: 20px; padding: 0 5px; }
-        #station-name { color: #1e293b; font-weight: 800; font-size: 1.2em; }
+        .agrume-card { padding: 16px; margin-bottom: 12px; border-radius: 10px; background: #fff; border: 1px solid #f1f5f9; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
 
-        .agrume-card {
-            padding: 16px; margin-bottom: 12px; border-radius: 10px;
-            background: #fff; border: 1px solid #f1f5f9;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
+        .status-ok { border-left: 6px solid #16a34a; background: #f0fdf4; } /* Vert complet */
+        .status-early { border-left: 6px solid #fb923c; background: #fff7ed; } /* Orange/Opportunité */
+        .status-warning { border-left: 6px solid #eab308; background: #fffbeb; } /* Jaune / Menacé */
+        .status-ko { border-left: 6px solid #ef4444; opacity: 0.75; background: #fef2f2; } /* Rouge */
 
-        .status-ok { border-left: 6px solid #22c55e; }
-        .status-warning { border-left: 6px solid #eab308; background: #fffbeb; }
-        .status-ko { border-left: 6px solid #ef4444; opacity: 0.75; background: #fef2f2; }
-
-        .temp-tag {
-            background: #fee2e2; padding: 1px 4px; border-radius: 4px;
-            font-family: ui-monospace, monospace;
-            font-weight: 700; color: #991b1b; font-size: 0.85em;
-        }
-
-        .badge {
-            display: inline-block; font-size: 0.7em; padding: 3px 8px;
-            border-radius: 6px; font-weight: 700; margin-top: 10px; margin-right: 5px;
-            text-transform: uppercase; letter-spacing: 0.02em;
-        }
+        .temp-tag { background: #fee2e2; padding: 1px 4px; border-radius: 4px; font-family: ui-monospace, monospace; font-weight: 700; color: #991b1b; font-size: 0.85em; }
+        .badge { display: inline-block; font-size: 0.7em; padding: 3px 8px; border-radius: 6px; font-weight: 700; margin-top: 10px; margin-right: 5px; text-transform: uppercase; }
         .badge-fruit { background: #f97316; color: white; }
         .badge-recolte { background: #3b82f6; color: white; }
 
-        /* Légende corrigée avec Flexbox */
-        .legend {
-            padding: 12px; background: white; border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 0.85em; color: #475569;
-        }
+        .legend { padding: 12px; background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 0.85em; color: #475569; }
         .legend h4 { margin: 0 0 8px 0; color: #1e293b; font-size: 1em; }
         .legend-item { display: flex; align-items: center; margin-bottom: 5px; }
-        .legend-item i {
-            width: 14px; height: 14px; margin-right: 10px;
-            border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0;
-        }
+        .legend-item i { width: 14px; height: 14px; margin-right: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0; }
 
-        select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #fed7aa; margin-top: 8px; font-size: 0.9em; background: white; cursor: pointer; }
-        hr { border: 0; border-top: 1px solid #f1f5f9; margin: 20px 0; }
+        .source-mention { font-size: 0.75em; color: #94a3b8; margin-top: auto; padding-top: 20px; text-align: center; }
+        .source-mention a { color: #3b82f6; text-decoration: none; }
+        select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #fed7aa; margin-top: 8px; cursor: pointer; }
     </style>
 </head>
 <body>
 
 <div id="map"></div>
-
 <div id="sidebar">
     <h2>Orange givrée <span>❄️🍊</span></h2>
-
-    <div id="station-info">
-        <span id="station-name">Sélectionnez une station</span><br>
-        <small id="min-display" style="color: #64748b;">Analyse des données Météo-France</small>
-    </div>
-
     <div class="period-selector">
         <label for="period-select"><strong>Fenêtre d'analyse :</strong></label>
         <select id="period-select" onchange="refreshView()">
@@ -96,72 +54,50 @@
             <option value="last_20y">Historique (20 dernières années)</option>
         </select>
     </div>
-
+    <div id="station-info">
+        <span id="station-name">Sélectionnez une station</span>
+        <small id="min-display" style="color: #64748b;">Record de froid : - °C</small>
+    </div>
     <div id="agrumes-container">
-        <p style="color: #94a3b8; font-style: italic; text-align: center; margin-top: 40px;">Cliquez sur un point de la carte pour découvrir les variétés adaptées à ce micro-climat.</p>
+        <p style="color: #94a3b8; font-style: italic; text-align: center; margin-top: 40px;">Cliquez sur un point de la carte.</p>
+    </div>
+    <div class="source-mention">
+        Données météo : <a href="https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes" target="_blank">Météo-France (Data.gouv.fr)</a>
     </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <script>
     const map = L.map('map').setView([46.5, 2.5], 6);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap'
-    }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
     let agrumesData = [];
     let geojsonData = null;
     let geojsonLayer = null;
     let currentFeature = null;
-
     const monthNames = ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sept", "Oct", "Nov", "Déc"];
 
     function getColor(t) {
-        return t > 0    ? '#22c55e' : t > -5   ? '#84cc16' : t > -8   ? '#eab308' :
-               t > -10  ? '#f97316' : t > -12  ? '#ef4444' : t > -15  ? '#dc2626' : '#7f1d1d';
+        return t > 0 ? '#22c55e' : t > -5 ? '#84cc16' : t > -8 ? '#eab308' : t > -10 ? '#f97316' : t > -12 ? '#ef4444' : t > -15 ? '#dc2626' : '#7f1d1d';
     }
 
-    // Chargement des données
     fetch('agrumes.json').then(res => res.json()).then(data => { agrumesData = data; });
     fetch('stations_temperatures.geojson').then(res => res.json()).then(data => { geojsonData = data; renderMap(); });
 
     function renderMap() {
         const period = document.getElementById('period-select').value;
         if (geojsonLayer) map.removeLayer(geojsonLayer);
-
         geojsonLayer = L.geoJSON(geojsonData, {
             filter: (f) => f.properties[period] && f.properties[period].min_absolute !== null,
             pointToLayer: (f, latlng) => L.circleMarker(latlng, {
-                radius: 8,
-                fillColor: getColor(f.properties[period].min_absolute),
-                color: "#fff",
-                weight: 0.8,
-                fillOpacity: 0.9
+                radius: 8, fillColor: getColor(f.properties[period].min_absolute),
+                color: "#fff", weight: 0.8, fillOpacity: 0.9
             }),
             onEachFeature: (f, layer) => {
-                // Effet au survol
-                layer.on('mouseover', function (e) {
-                    this.setRadius(12); // Le point grossit
-                    this.setStyle({ weight: 2 }); // Le liseré s'épaissit
-                });
-
-                // Retour à l'état normal
-                layer.on('mouseout', function (e) {
-                    this.setRadius(8);
-                    this.setStyle({ weight: 0.8 });
-                });
-
-                // Sélection au clic
-                layer.on('click', () => {
-                    currentFeature = f;
-                    updateSidebarContent();
-                });
-
-                layer.bindTooltip(`<b>${f.properties.nom}</b>: ${f.properties[period].min_absolute}°C`, {
-                    direction: 'top',
-                    offset: [0, -10]
-                });
+                layer.on('mouseover', function() { this.setRadius(12); this.setStyle({weight: 2}); });
+                layer.on('mouseout', function() { this.setRadius(8); this.setStyle({weight: 0.8}); });
+                layer.on('click', () => { currentFeature = f; updateSidebarContent(); });
+                layer.bindTooltip(`<b>${f.properties.nom}</b>: ${f.properties[period].min_absolute}°C`, {direction:'top', offset:[0,-10]});
             }
         }).addTo(map);
     }
@@ -180,60 +116,51 @@
         const container = document.getElementById('agrumes-container');
         container.innerHTML = "";
 
-        // Tri par priorité (1: OK total, 2: Risque fruit, 3: Mort arbre)
-        const sortedAgrumes = [...agrumesData].sort((a, b) => {
-            const getPriority = (agr) => {
-                const survit = minAbs > agr.seuil_arbre;
-                let fruitMenace = false;
-                agr.recolte.forEach(m => {
-                    if (periodStats.by_month["month_" + m] <= agr.seuil_fruit) fruitMenace = true;
-                });
-                if (!survit) return 3;
-                if (fruitMenace) return 2;
-                return 1;
-            };
-            return getPriority(a) - getPriority(b);
-        });
+        // Nouvelle logique de tri et catégorie
+        const processed = agrumesData.map(agr => {
+            const survitArbre = minAbs > agr.seuil_arbre;
+            let moisSains = [];
+            let moisGeles = [];
 
-        sortedAgrumes.forEach(agrume => {
-            const card = document.createElement('div');
-            card.className = "agrume-card";
-
-            const arbreSurvit = minAbs > agrume.seuil_arbre;
-            let alertesRecolte = [];
-
-            agrume.recolte.forEach(m => {
-                const minMois = periodStats.by_month["month_" + m];
-                if (minMois !== null && minMois <= agrume.seuil_fruit) {
-                    alertesRecolte.push(`${monthNames[m-1]} (<span class="temp-tag">${minMois}°C</span>)`);
-                }
+            agr.recolte.forEach(m => {
+                const tMin = periodStats.by_month["month_" + m];
+                if (tMin <= agr.seuil_fruit) moisGeles.push({m, tMin});
+                else moisSains.push(m);
             });
 
-            const txtRecolte = agrume.recolte.map(m => monthNames[m-1]).join('/');
+            let statut = "ok";
+            let priorite = 1;
 
-            if (!arbreSurvit) {
-                card.classList.add("status-ko");
-                card.innerHTML = `<strong>❌ ${agrume.nom}</strong><br>
-                    <small>Gel létal pour le bois (Record : ${minAbs}°C).<br>Seuil de résistance : ${agrume.seuil_arbre}°C</small>`;
-            } else if (alertesRecolte.length > 0) {
-                card.classList.add("status-warning");
-                card.innerHTML = `<strong>⚠️ ${agrume.nom}</strong><br>
-                    <small>Arbre OK, mais <b>fruits menacés</b> en :</small>
-                    <div style="margin: 8px 0; font-size:0.85em; line-height:1.6;">${alertesRecolte.join(' ')}</div>
-                    <span class="badge badge-recolte">Récolte : ${txtRecolte}</span>
-                    <span class="badge badge-fruit">Gel fruit < ${agrume.seuil_fruit}°C</span>`;
+            if (!survitArbre) { statut = "ko"; priorite = 4; }
+            else if (moisGeles.length === 0) { statut = "ok"; priorite = 1; }
+            else if (moisSains.length > 0) { statut = "early"; priorite = 2; } // On peut récolter certains mois
+            else { statut = "warning"; priorite = 3; } // Tout est gelé
+
+            return { ...agr, statut, priorite, moisGeles, moisSains };
+        }).sort((a, b) => a.priorite - b.priorite);
+
+        processed.forEach(agr => {
+            const card = document.createElement('div');
+            card.className = `agrume-card status-${agr.statut}`;
+
+            const txtRecolte = agr.recolte.map(m => monthNames[m-1]).join('/');
+            const badgeRecolte = `<span class="badge badge-recolte">Récolte : ${txtRecolte}</span>`;
+
+            if (agr.statut === "ko") {
+                card.innerHTML = `<strong>❌ ${agr.nom}</strong><br><small>Arbre gélif (Limite : ${agr.seuil_arbre}°C)</small><br>${badgeRecolte}`;
+            } else if (agr.statut === "ok") {
+                card.innerHTML = `<strong>✅ ${agr.nom}</strong><br><small>Récolte sécurisée sur toute la période.</small><br>${badgeRecolte}`;
+            } else if (agr.statut === "early") {
+                const moisOK = agr.moisSains.map(m => monthNames[m-1]).join(', ');
+                card.innerHTML = `<strong>✨ ${agr.nom} (Opportunité)</strong><br><small>Récolte possible avant le gel en : <b>${moisOK}</b>.</small><br>${badgeRecolte}`;
             } else {
-                card.classList.add("status-ok");
-                card.innerHTML = `<strong>✅ ${agrume.nom}</strong><br>
-                    <small>Récolte et arbre sécurisés sur cette période.</small><br>
-                    <span class="badge badge-recolte">Période : ${txtRecolte}</span>
-                    <span class="badge badge-fruit">Fruit résiste à ${agrume.seuil_fruit}°C</span>`;
+                const alertes = agr.moisGeles.map(obj => `${monthNames[obj.m-1]} (<span class="temp-tag">${obj.tMin}°C</span>)`).join(' ');
+                card.innerHTML = `<strong>⚠️ ${agr.nom}</strong><br><small>Fruits systématiquement gelés :</small><div style="margin-top:5px; font-size:0.85em;">${alertes}</div>${badgeRecolte}`;
             }
             container.appendChild(card);
         });
     }
 
-    // Légende améliorée
     const legend = L.control({position: 'bottomleft'});
     legend.onAdd = function () {
         const div = L.DomUtil.create('div', 'legend');
@@ -241,12 +168,7 @@
         div.innerHTML = '<h4>Minimales Station</h4>';
         for (let i = 0; i < grades.length; i++) {
             const color = getColor(grades[i] + 1);
-            const label = grades[i+1] ? `${grades[i]} à ${grades[i+1]}°C` : `> ${grades[i]}°C`;
-            div.innerHTML += `
-                <div class="legend-item">
-                    <i style="background: ${color}"></i>
-                    <span>${label}</span>
-                </div>`;
+            div.innerHTML += `<div class="legend-item"><i style="background: ${color}"></i><span>${grades[i+1] ? grades[i]+' à '+grades[i+1] : '> '+grades[i]}°C</span></div>`;
         }
         return div;
     };
