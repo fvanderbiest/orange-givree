@@ -37,7 +37,16 @@
 
         .intro-text { font-size: 0.85rem; line-height: 1.4; color: #64748b; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; }
 
-        .period-selector { margin-bottom: 12px; padding: 12px; background: #fff7ed; border-radius: 12px; border: 1px solid #ffedd5; }
+        .controls-group { margin-bottom: 15px; }
+        .period-selector { padding: 12px; background: #fff7ed; border-radius: 12px; border: 1px solid #ffedd5; margin-bottom: 10px; }
+
+        #search-container { margin-bottom: 15px; display: none; }
+        #search-input {
+            width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0;
+            box-sizing: border-box; font-size: 0.9rem; outline: none; transition: border-color 0.2s;
+        }
+        #search-input:focus { border-color: var(--primary); }
+
         #station-info { margin-bottom: 15px; padding: 12px; background: #f1f5f9; border-radius: 12px; border: 1px solid #e2e8f0; }
         #station-name { color: #1e293b; font-weight: 800; font-size: 1.1em; display: block; }
 
@@ -90,13 +99,19 @@
         Elle permet de vérifier si une variété peut survivre à votre climat et si ses fruits pourront être récoltés avant les grands froids.
     </div>
 
-    <div class="period-selector">
-        <label for="period-select"><small><b>FENÊTRE D'ANALYSE :</b></small></label>
-        <select id="period-select" onchange="refreshView()">
-            <option value="last_5y" selected>Climat récent (5 ans)</option>
-            <option value="last_10y">Tendance (10 ans)</option>
-            <option value="last_20y">Historique (20 ans)</option>
-        </select>
+    <div class="controls-group">
+        <div class="period-selector">
+            <label for="period-select"><small><b>FENÊTRE D'ANALYSE :</b></small></label>
+            <select id="period-select" onchange="refreshView()">
+                <option value="last_5y" selected>Climat récent (5 ans)</option>
+                <option value="last_10y">Tendance (10 ans)</option>
+                <option value="last_20y">Historique (20 ans)</option>
+            </select>
+        </div>
+
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Rechercher une variété..." oninput="updateSidebarContent()">
+        </div>
     </div>
 
     <div id="station-info">
@@ -146,7 +161,11 @@
             onEachFeature: (f, layer) => {
                 layer.on('mouseover', function() { this.setRadius(12); this.setStyle({weight: 2}); });
                 layer.on('mouseout', function() { this.setRadius(8); this.setStyle({weight: 0.8}); });
-                layer.on('click', () => { currentFeature = f; updateSidebarContent(); });
+                layer.on('click', () => {
+                    currentFeature = f;
+                    document.getElementById('search-container').style.display = 'block';
+                    updateSidebarContent();
+                });
                 layer.bindTooltip(`<b>${f.properties.nom}</b>`, {direction:'top'});
             }
         }).addTo(map);
@@ -155,10 +174,13 @@
     function refreshView() { renderMap(); if (currentFeature) updateSidebarContent(); }
 
     function updateSidebarContent() {
+        if (!currentFeature) return;
+
         const period = document.getElementById('period-select').value;
         const props = currentFeature.properties;
         const periodStats = props[period];
         const minAbs = periodStats.min_absolute;
+        const searchQuery = document.getElementById('search-input').value.toLowerCase();
 
         document.getElementById('station-name').innerText = props.nom;
         document.getElementById('min-display').innerText = `Record local : ${minAbs}°C`;
@@ -166,40 +188,50 @@
         const container = document.getElementById('agrumes-container');
         container.innerHTML = "";
 
-        const processed = agrumesData.map(agr => {
-            const survitArbre = minAbs > agr.seuil_arbre;
-            let moisDonnees = [];
-            let forceRed = false, forceOrange = false;
-            let gelesTotal = 0, sainsTotal = 0;
+        const processed = agrumesData
+            .filter(agr => agr.nom.toLowerCase().includes(searchQuery))
+            .map(agr => {
+                const survitArbre = minAbs > agr.seuil_arbre;
+                let moisDonnees = [];
+                let forceRed = false, forceOrange = false;
+                let gelesTotal = 0, sainsTotal = 0;
 
-            agr.recolte.forEach(m => {
-                const tMin = periodStats.by_month["month_" + m];
-                let currentStatus = "green"; // Par défaut "Vert" si pas de données
+                agr.recolte.forEach(m => {
+                    const tMin = periodStats.by_month["month_" + m];
+                    let currentStatus = "green";
 
-                if (tMin !== undefined && tMin !== null) {
-                    if (tMin < (agr.seuil_fruit - 1)) currentStatus = "red";
-                    else if (tMin >= (agr.seuil_fruit - 1) && tMin <= (agr.seuil_fruit + 1)) currentStatus = "orange";
-                }
+                    if (tMin !== undefined && tMin !== null) {
+                        if (tMin < (agr.seuil_fruit - 1)) currentStatus = "red";
+                        else if (tMin >= (agr.seuil_fruit - 1) && tMin <= (agr.seuil_fruit + 1)) currentStatus = "orange";
+                    }
 
-                // Mémoire du gel
-                if (forceRed) currentStatus = "red";
-                else if (forceOrange && currentStatus === "green") currentStatus = "orange";
+                    if (forceRed) currentStatus = "red";
+                    else if (forceOrange && currentStatus === "green") currentStatus = "orange";
 
-                if (currentStatus === "red") { forceRed = true; gelesTotal++; }
-                if (currentStatus === "orange") forceOrange = true;
-                if (currentStatus === "green") sainsTotal++;
+                    if (currentStatus === "red") { forceRed = true; gelesTotal++; }
+                    if (currentStatus === "orange") forceOrange = true;
+                    if (currentStatus === "green") sainsTotal++;
 
-                moisDonnees.push({ name: monthNames[m-1], temp: tMin, color: `m-${currentStatus}` });
+                    moisDonnees.push({ name: monthNames[m-1], temp: tMin, color: `m-${currentStatus}` });
+                });
+
+                let statut = "ok", priorite = 1;
+                if (!survitArbre) { statut = "ko"; priorite = 4; }
+                else if (gelesTotal === 0 && sainsTotal === agr.recolte.length) { statut = "ok"; priorite = 1; }
+                else if (sainsTotal > 0) { statut = "early"; priorite = 2; }
+                else { statut = "warning"; priorite = 3; }
+
+                return { ...agr, statut, priorite, moisDonnees };
+            })
+            .sort((a, b) => {
+                if (a.priorite !== b.priorite) return a.priorite - b.priorite;
+                return a.seuil_arbre - b.seuil_arbre;
             });
 
-            let statut = "ok", priorite = 1;
-            if (!survitArbre) { statut = "ko"; priorite = 4; }
-            else if (gelesTotal === 0 && sainsTotal === agr.recolte.length) { statut = "ok"; priorite = 1; }
-            else if (sainsTotal > 0) { statut = "early"; priorite = 2; }
-            else { statut = "warning"; priorite = 3; }
-
-            return { ...agr, statut, priorite, moisDonnees };
-        }).sort((a, b) => a.priorite - b.priorite);
+        if (processed.length === 0) {
+            container.innerHTML = `<p style="text-align:center; color:#94a3b8; font-size:0.9rem; margin-top:20px;">Aucune variété trouvée.</p>`;
+            return;
+        }
 
         processed.forEach(agr => {
             const card = document.createElement('div');
