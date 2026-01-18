@@ -11,21 +11,9 @@
 
     <style>
         :root { --primary: #c2410c; --bg: #f8fafc; --white: #ffffff; }
-
         body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; display: flex; height: 100vh; background: var(--bg); color: #1e293b; overflow: hidden; }
-
         #map { flex: 1; height: 100%; min-height: 300px; }
-
-        #sidebar {
-            width: 420px;
-            background: var(--white);
-            border-left: 1px solid #e2e8f0;
-            padding: 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            z-index: 1000;
-        }
+        #sidebar { width: 420px; background: var(--white); border-left: 1px solid #e2e8f0; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; z-index: 1000; }
 
         @media (max-width: 768px) {
             body { flex-direction: column; }
@@ -34,58 +22,35 @@
         }
 
         h2 { color: var(--primary); margin: 0 0 10px 0; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
-
         .intro-text { font-size: 0.85rem; line-height: 1.4; color: #64748b; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; }
-
         .period-selector { padding: 12px; background: #fff7ed; border-radius: 12px; border: 1px solid #ffedd5; margin-bottom: 15px; }
-
         #station-info { margin-bottom: 15px; padding: 12px; background: #f1f5f9; border-radius: 12px; border: 1px solid #e2e8f0; }
         #station-name { color: #1e293b; font-weight: 800; font-size: 1.1em; display: block; }
-
-        /* Conteneur de recherche positionné sous la station */
         #search-container { margin-bottom: 15px; display: none; }
-        #search-input {
-            width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0;
-            box-sizing: border-box; font-size: 0.9rem; outline: none; transition: border-color 0.2s;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
-        }
+        #search-input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0; box-sizing: border-box; font-size: 0.9rem; outline: none; }
         #search-input:focus { border-color: var(--primary); }
 
-        .agrume-card {
-            padding: 14px; margin-bottom: 10px; border-radius: 10px;
-            background: var(--white); border: 1px solid #f1f5f9;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            position: relative;
-        }
-
+        .agrume-card { padding: 14px; margin-bottom: 10px; border-radius: 10px; background: var(--white); border: 1px solid #f1f5f9; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .status-ok { border-left: 5px solid #16a34a; background: #f0fdf4; }
         .status-early { border-left: 5px solid #eab308; background: #fffbeb; }
         .status-warning { border-left: 5px solid #f97316; background: #fff7ed; }
         .status-ko { border-left: 5px solid #ef4444; opacity: 0.8; background: #fef2f2; }
 
-        .month-badges-container { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; padding-right: 50px; }
-        .m-badge {
-            font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; font-weight: 800;
-            color: white; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; min-width: 32px;
-        }
+        .month-badges-container { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+        .m-badge { font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; font-weight: 800; color: white; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; min-width: 32px; }
         .m-temp { font-size: 0.55rem; font-weight: 400; opacity: 0.9; }
-
         .m-green { background-color: #16a34a; }
         .m-orange { background-color: #f97316; }
         .m-red { background-color: #dc2626; }
+        .m-grey { background-color: #94a3b8; }
 
-        .tree-limit { font-size: 0.75rem; color: #94a3b8; font-weight: 400; margin-left: 8px; }
-        .fruit-limit {
-            position: absolute; bottom: 10px; right: 10px;
-            font-size: 0.6rem; color: #64748b; font-weight: 600;
-            background: rgba(255,255,255,0.6); padding: 2px 5px; border-radius: 4px;
-        }
+        .limits-tag { font-size: 0.75rem; color: #94a3b8; font-weight: 400; margin-left: 8px; white-space: nowrap; }
 
         .legend { padding: 10px; background: var(--white); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-size: 0.75rem; }
         .legend-item { display: flex; align-items: center; margin-bottom: 3px; }
         .legend-item i { width: 12px; height: 12px; margin-right: 8px; border-radius: 50%; flex-shrink: 0; }
 
-        .source-mention { font-size: 0.7rem; color: #94a3b8; margin-top: auto; padding-top: 15px; text-align: center; line-height: 1.4; }
+        .source-mention { font-size: 0.7rem; color: #94a3b8; margin-top: auto; padding-top: 15px; text-align: center; }
         .source-mention a { color: #3b82f6; text-decoration: none; }
         select { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #fed7aa; margin-top: 5px; cursor: pointer; font-size: 0.9rem; }
     </style>
@@ -99,7 +64,6 @@
         Cette application croise les données historiques de <b>Météo-France</b> avec la résistance au gel des agrumes.
         Elle permet de vérifier si une variété peut survivre à votre climat et si ses fruits pourront être récoltés avant les grands froids.
     </div>
-
     <div class="period-selector">
         <label for="period-select"><small><b>FENÊTRE D'ANALYSE :</b></small></label>
         <select id="period-select" onchange="refreshView()">
@@ -108,20 +72,16 @@
             <option value="last_20y">Historique (20 ans)</option>
         </select>
     </div>
-
     <div id="station-info">
         <span id="station-name">Choisir une station sur la carte</span>
         <small id="min-display" style="color: #64748b;">Analyse des minimales absolues</small>
     </div>
-
     <div id="search-container">
-        <input type="text" id="search-input" placeholder="Filtrer les variétés (ex: Yuzu, Satsuma...)" oninput="updateSidebarContent()">
+        <input type="text" id="search-input" placeholder="Filtrer les variétés..." oninput="updateSidebarContent()">
     </div>
-
     <div id="agrumes-container">
         <p style="color: #94a3b8; font-style: italic; text-align: center; margin-top: 20px;">Cliquez sur un point pour lancer l'analyse.</p>
     </div>
-
     <div class="source-mention">
         Données compilées sur la période 2006-2026 (source <a href="https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes" target="_blank">Météo-France</a>)<br>
     </div>
@@ -135,9 +95,7 @@
     }).addTo(map);
 
     let agrumesData = [];
-    let geojsonData = null;
-    let geojsonLayer = null;
-    let currentFeature = null;
+    let geojsonData = null, geojsonLayer = null, currentFeature = null;
     const monthNames = ["Jan", "Fév", "Mar", "Avr", "Mai", "Jun", "Jul", "Août", "Sep", "Oct", "Nov", "Déc"];
 
     function getColor(t) {
@@ -152,10 +110,7 @@
         if (geojsonLayer) map.removeLayer(geojsonLayer);
         geojsonLayer = L.geoJSON(geojsonData, {
             filter: (f) => f.properties[period] && f.properties[period].min_absolute !== null,
-            pointToLayer: (f, latlng) => L.circleMarker(latlng, {
-                radius: 8, fillColor: getColor(f.properties[period].min_absolute),
-                color: "#fff", weight: 0.8, fillOpacity: 0.9
-            }),
+            pointToLayer: (f, latlng) => L.circleMarker(latlng, { radius: 8, fillColor: getColor(f.properties[period].min_absolute), color: "#fff", weight: 0.8, fillOpacity: 0.9 }),
             onEachFeature: (f, layer) => {
                 layer.on('mouseover', function() { this.setRadius(12); this.setStyle({weight: 2}); });
                 layer.on('mouseout', function() { this.setRadius(8); this.setStyle({weight: 0.8}); });
@@ -173,16 +128,11 @@
 
     function updateSidebarContent() {
         if (!currentFeature) return;
-
         const period = document.getElementById('period-select').value;
         const props = currentFeature.properties;
         const periodStats = props[period];
         const minAbs = periodStats.min_absolute;
         const searchQuery = document.getElementById('search-input').value.toLowerCase();
-
-        document.getElementById('station-name').innerText = props.nom;
-        document.getElementById('min-display').innerText = `Record local : ${minAbs}°C`;
-
         const container = document.getElementById('agrumes-container');
         container.innerHTML = "";
 
@@ -191,50 +141,65 @@
             .map(agr => {
                 const survitArbre = minAbs > agr.seuil_arbre;
                 let moisDonnees = [];
-                let forceRed = false, forceOrange = false;
-                let gelesTotal = 0, sainsTotal = 0;
+                let forceRed = false, forceOrange = false, gelesSeverement = false;
+                let gelesTotalCount = 0, sainsTotalCount = 0;
+
+                const checkMonths = (targetMonth) => {
+                    const months = [];
+                    let curr = 9;
+                    while (curr !== targetMonth) {
+                        months.push(curr);
+                        curr = (curr % 12) + 1;
+                    }
+                    return months;
+                };
 
                 agr.recolte.forEach(m => {
+                    const precursors = checkMonths(m);
+                    precursors.forEach(p => {
+                        const tPrev = periodStats.by_month["month_" + p];
+                        if (tMinPresent(tPrev)) {
+                            if (tPrev < (agr.seuil_fruit - 2)) { forceRed = true; gelesSeverement = true; }
+                            else if (tPrev < (agr.seuil_fruit - 1)) { forceRed = true; }
+                            else if (tMinApproached(tPrev, agr.seuil_fruit)) { forceOrange = true; }
+                        }
+                    });
+
                     const tMin = periodStats.by_month["month_" + m];
                     let currentStatus = "green";
-
-                    if (tMin !== undefined && tMin !== null) {
-                        if (tMin < (agr.seuil_fruit - 1)) currentStatus = "red";
-                        else if (tMin >= (agr.seuil_fruit - 1) && tMin <= (agr.seuil_fruit + 1)) currentStatus = "orange";
+                    if (tMinPresent(tMin)) {
+                        if (tMin < (agr.seuil_fruit - 2)) { currentStatus = "red"; gelesSeverement = true; }
+                        else if (tMin < (agr.seuil_fruit - 1)) currentStatus = "red";
+                        else if (tMinApproached(tMin, agr.seuil_fruit)) currentStatus = "orange";
                     }
 
                     if (forceRed) currentStatus = "red";
                     else if (forceOrange && currentStatus === "green") currentStatus = "orange";
 
-                    if (currentStatus === "red") { forceRed = true; gelesTotal++; }
-                    if (currentStatus === "orange") forceOrange = true;
-                    if (currentStatus === "green") sainsTotal++;
-
+                    if (currentStatus === "red") gelesTotalCount++;
+                    if (currentStatus === "green") sainsTotalCount++;
                     moisDonnees.push({ name: monthNames[m-1], temp: tMin, color: `m-${currentStatus}` });
                 });
 
                 let statut = "ok", priorite = 1;
                 if (!survitArbre) { statut = "ko"; priorite = 4; }
-                else if (gelesTotal === 0 && sainsTotal === agr.recolte.length) { statut = "ok"; priorite = 1; }
-                else if (sainsTotal > 0) { statut = "early"; priorite = 2; }
+                else if (gelesTotalCount === 0 && sainsTotalCount === agr.recolte.length) { statut = "ok"; priorite = 1; }
+                else if (sainsTotalCount > 0) { statut = "early"; priorite = 2; }
                 else { statut = "warning"; priorite = 3; }
 
-                return { ...agr, statut, priorite, moisDonnees };
+                return { ...agr, statut, priorite, moisDonnees, gelesSeverement };
             })
-            .sort((a, b) => {
-                if (a.priorite !== b.priorite) return a.priorite - b.priorite;
-                return a.seuil_arbre - b.seuil_arbre;
-            });
+            .sort((a, b) => (a.priorite !== b.priorite) ? a.priorite - b.priorite : a.seuil_arbre - b.seuil_arbre);
 
-        if (processed.length === 0) {
-            container.innerHTML = `<p style="text-align:center; color:#94a3b8; font-size:0.9rem; margin-top:20px;">Aucune variété trouvée.</p>`;
-            return;
-        }
+        function tMinPresent(t) { return t !== undefined && t !== null; }
+        function tMinApproached(t, seuil) { return t >= (seuil - 1) && t <= (seuil + 1); }
+
+        document.getElementById('station-name').innerText = props.nom;
+        document.getElementById('min-display').innerText = `Record local : ${minAbs}°C`;
 
         processed.forEach(agr => {
             const card = document.createElement('div');
             card.className = `agrume-card status-${agr.statut}`;
-
             let badgesHtml = '<div class="month-badges-container">';
             agr.moisDonnees.forEach(m => {
                 const tempDisplay = (m.temp !== undefined && m.temp !== null) ? `${m.temp}°` : '';
@@ -242,19 +207,18 @@
             });
             badgesHtml += '</div>';
 
-            let desc = "";
-            if (agr.statut === "ko") desc = `<small>Arbre gélif (Record : ${minAbs}°C)</small>`;
-            else if (agr.statut === "ok") desc = `<small>Adaptation totale confirmée.</small>`;
-            else if (agr.statut === "early") desc = `<small>Récolte précoce possible.</small>`;
-            else desc = `<small>Fruits systématiquement gelés.</small>`;
+            let msg = (agr.statut === "ko") ? `Variété non adaptée.` :
+                      (agr.statut === "ok") ? `Variété adaptée.` :
+                      (agr.statut === "early") ? `Récolte partielle possible.` :
+                      (agr.gelesSeverement) ? `Fruits systématiquement gelés.` : `Récolte compromise par le gel.`;
 
             card.innerHTML = `
-                <div>
-                    <strong>${agr.nom.split('(')[0]}</strong><span class="tree-limit">${agr.seuil_arbre}°C</span>
+                <div style="display:flex; justify-content:space-between; align-items: baseline;">
+                    <strong>${agr.nom.split('(')[0]}</strong>
+                    <span class="limits-tag">Arbre : ${agr.seuil_arbre}° | Fruits : ${agr.seuil_fruit}°</span>
                 </div>
-                ${desc}
+                <small>${msg}</small>
                 ${badgesHtml}
-                <div class="fruit-limit">Fruit : ${agr.seuil_fruit}°C</div>
             `;
             container.appendChild(card);
         });
