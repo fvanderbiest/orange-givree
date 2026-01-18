@@ -217,7 +217,7 @@
     legend.onAdd = function () {
         const div = L.DomUtil.create('div', 'legend');
         const grades = [-20, -15, -12, -10, -8, -5, 0];
-        div.innerHTML = '<b>Minimales Absolues</b><br>';
+        div.innerHTML = '<b>Minimales</b><br>';
         for (let i = 0; i < grades.length; i++) {
             const color = getMarkerColor(grades[i] + 1);
             div.innerHTML += `<div class="legend-item"><i style="background: ${color}"></i><span>${grades[i+1] ? grades[i]+' à '+grades[i+1] : '> '+grades[i]}°C</span></div>`;
