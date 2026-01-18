@@ -29,11 +29,13 @@
 
         @media (max-width: 768px) {
             body { flex-direction: column; }
-            #sidebar { width: 100%; height: 55vh; border-left: none; border-top: 2px solid #e2e8f0; padding: 15px; }
-            #map { flex: none; height: 45vh; }
+            #sidebar { width: 100%; height: 60vh; border-left: none; border-top: 2px solid #e2e8f0; padding: 15px; }
+            #map { flex: none; height: 40vh; }
         }
 
-        h2 { color: var(--primary); margin: 0 0 15px 0; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
+        h2 { color: var(--primary); margin: 0 0 10px 0; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
+
+        .intro-text { font-size: 0.85rem; line-height: 1.4; color: #64748b; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; }
 
         .period-selector { margin-bottom: 12px; padding: 12px; background: #fff7ed; border-radius: 12px; border: 1px solid #ffedd5; }
         #station-info { margin-bottom: 15px; padding: 12px; background: #f1f5f9; border-radius: 12px; border: 1px solid #e2e8f0; }
@@ -61,7 +63,6 @@
         .m-green { background-color: #16a34a; }
         .m-orange { background-color: #f97316; }
         .m-red { background-color: #dc2626; }
-        .m-grey { background-color: #94a3b8; }
 
         .tree-limit { font-size: 0.75rem; color: #94a3b8; font-weight: 400; margin-left: 8px; }
         .fruit-limit {
@@ -74,7 +75,8 @@
         .legend-item { display: flex; align-items: center; margin-bottom: 3px; }
         .legend-item i { width: 12px; height: 12px; margin-right: 8px; border-radius: 50%; flex-shrink: 0; }
 
-        .source-mention { font-size: 0.7rem; color: #94a3b8; margin-top: auto; padding-top: 15px; text-align: center; }
+        .source-mention { font-size: 0.7rem; color: #94a3b8; margin-top: auto; padding-top: 15px; text-align: center; line-height: 1.4; }
+        .source-mention a { color: #3b82f6; text-decoration: none; }
         select { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #fed7aa; margin-top: 5px; cursor: pointer; font-size: 0.9rem; }
     </style>
 </head>
@@ -83,30 +85,41 @@
 <div id="map"></div>
 <div id="sidebar">
     <h2>Orange givrée <span>❄️🍊</span></h2>
+    <div class="intro-text">
+        Cette application croise les données historiques de <b>Météo-France</b> avec la résistance au gel des agrumes.
+        Elle permet de vérifier si une variété peut survivre à votre climat et si ses fruits pourront être récoltés avant les grands froids.
+    </div>
+
     <div class="period-selector">
-        <label for="period-select"><small><b>ANALYSE CLIMATIQUE :</b></small></label>
+        <label for="period-select"><small><b>FENÊTRE D'ANALYSE :</b></small></label>
         <select id="period-select" onchange="refreshView()">
             <option value="last_5y" selected>Climat récent (5 ans)</option>
             <option value="last_10y">Tendance (10 ans)</option>
             <option value="last_20y">Historique (20 ans)</option>
         </select>
     </div>
+
     <div id="station-info">
-        <span id="station-name">Choisir une station</span>
-        <small id="min-display" style="color: #64748b;">Minimales enregistrées</small>
+        <span id="station-name">Choisir une station sur la carte</span>
+        <small id="min-display" style="color: #64748b;">Analyse des minimales absolues</small>
     </div>
+
     <div id="agrumes-container">
-        <p style="color: #94a3b8; font-style: italic; text-align: center; margin-top: 20px;">Cliquez sur un point pour l'analyse.</p>
+        <p style="color: #94a3b8; font-style: italic; text-align: center; margin-top: 20px;">Cliquez sur un point pour lancer l'analyse.</p>
     </div>
+
     <div class="source-mention">
-        Source : <a href="https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes" target="_blank" style="color:#3b82f6; text-decoration:none;">Météo-France</a>
+        Données : <a href="https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes" target="_blank">Météo-France</a><br>
+        Carte : © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>
     </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
     const map = L.map('map').setView([46.5, 2.5], 5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
 
     let agrumesData = [];
     let geojsonData = null;
@@ -161,21 +174,22 @@
 
             agr.recolte.forEach(m => {
                 const tMin = periodStats.by_month["month_" + m];
-                let colorClass = "m-grey";
-                if (tMin !== null) {
-                    let currentStatus = "green";
+                let currentStatus = "green"; // Par défaut "Vert" si pas de données
+
+                if (tMin !== undefined && tMin !== null) {
                     if (tMin < (agr.seuil_fruit - 1)) currentStatus = "red";
                     else if (tMin >= (agr.seuil_fruit - 1) && tMin <= (agr.seuil_fruit + 1)) currentStatus = "orange";
-
-                    if (forceRed) currentStatus = "red";
-                    else if (forceOrange && currentStatus === "green") currentStatus = "orange";
-
-                    if (currentStatus === "red") { forceRed = true; gelesTotal++; }
-                    if (currentStatus === "orange") forceOrange = true;
-                    if (currentStatus === "green") sainsTotal++;
-                    colorClass = `m-${currentStatus}`;
                 }
-                moisDonnees.push({ name: monthNames[m-1], temp: tMin, color: colorClass });
+
+                // Mémoire du gel
+                if (forceRed) currentStatus = "red";
+                else if (forceOrange && currentStatus === "green") currentStatus = "orange";
+
+                if (currentStatus === "red") { forceRed = true; gelesTotal++; }
+                if (currentStatus === "orange") forceOrange = true;
+                if (currentStatus === "green") sainsTotal++;
+
+                moisDonnees.push({ name: monthNames[m-1], temp: tMin, color: `m-${currentStatus}` });
             });
 
             let statut = "ok", priorite = 1;
@@ -193,15 +207,16 @@
 
             let badgesHtml = '<div class="month-badges-container">';
             agr.moisDonnees.forEach(m => {
-                badgesHtml += `<div class="m-badge ${m.color}"><span>${m.name}</span><span class="m-temp">${m.temp !== null ? m.temp + '°' : '-'}</span></div>`;
+                const tempDisplay = (m.temp !== undefined && m.temp !== null) ? `${m.temp}°` : '';
+                badgesHtml += `<div class="m-badge ${m.color}"><span>${m.name}</span><span class="m-temp">${tempDisplay}</span></div>`;
             });
             badgesHtml += '</div>';
 
             let desc = "";
-            if (agr.statut === "ko") desc = `<small>Bois menacé par le froid.</small>`;
+            if (agr.statut === "ko") desc = `<small>Bois gélif (Record : ${minAbs}°C)</small>`;
             else if (agr.statut === "ok") desc = `<small>Adaptation totale confirmée.</small>`;
-            else if (agr.statut === "early") desc = `<small>Récolte à prioriser avant le gel.</small>`;
-            else desc = `<small>Récolte compromise par le gel.</small>`;
+            else if (agr.statut === "early") desc = `<small>Récolte partielle possible.</small>`;
+            else desc = `<small>Fruits systématiquement gelés.</small>`;
 
             card.innerHTML = `
                 <div>
