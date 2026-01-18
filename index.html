@@ -124,8 +124,7 @@
     </div>
 
     <div class="source-mention">
-        Données : <a href="https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes" target="_blank">Météo-France</a><br>
-        Carte : © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>
+        Données compilées sur la période 2006-2026 (source <a href="https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes" target="_blank">Météo-France</a>)<br>
     </div>
 </div>
 
@@ -245,9 +244,9 @@
             badgesHtml += '</div>';
 
             let desc = "";
-            if (agr.statut === "ko") desc = `<small>Bois gélif (Record : ${minAbs}°C)</small>`;
+            if (agr.statut === "ko") desc = `<small>Arbre gélif (Record : ${minAbs}°C)</small>`;
             else if (agr.statut === "ok") desc = `<small>Adaptation totale confirmée.</small>`;
-            else if (agr.statut === "early") desc = `<small>Récolte partielle possible.</small>`;
+            else if (agr.statut === "early") desc = `<small>Récolte précoce possible.</small>`;
             else desc = `<small>Fruits systématiquement gelés.</small>`;
 
             card.innerHTML = `
