@@ -21,10 +21,11 @@
 
         .agrume-card { padding: 16px; margin-bottom: 12px; border-radius: 10px; background: #fff; border: 1px solid #f1f5f9; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
 
-        .status-ok { border-left: 6px solid #16a34a; background: #f0fdf4; } /* Vert complet */
-        .status-early { border-left: 6px solid #fb923c; background: #fff7ed; } /* Orange/Opportunité */
-        .status-warning { border-left: 6px solid #eab308; background: #fffbeb; } /* Jaune / Menacé */
-        .status-ko { border-left: 6px solid #ef4444; opacity: 0.75; background: #fef2f2; } /* Rouge */
+        /* Hiérarchie des couleurs mise à jour */
+        .status-ok { border-left: 6px solid #16a34a; background: #f0fdf4; }      /* VERT : Succès total */
+        .status-early { border-left: 6px solid #eab308; background: #fffbeb; }   /* JAUNE : Opportunité (partiel) */
+        .status-warning { border-left: 6px solid #f97316; background: #fff7ed; } /* ORANGE : Risque gel fruits */
+        .status-ko { border-left: 6px solid #ef4444; opacity: 0.75; background: #fef2f2; } /* ROUGE : Gel arbre */
 
         .temp-tag { background: #fee2e2; padding: 1px 4px; border-radius: 4px; font-family: ui-monospace, monospace; font-weight: 700; color: #991b1b; font-size: 0.85em; }
         .badge { display: inline-block; font-size: 0.7em; padding: 3px 8px; border-radius: 6px; font-weight: 700; margin-top: 10px; margin-right: 5px; text-transform: uppercase; }
@@ -36,7 +37,7 @@
         .legend-item { display: flex; align-items: center; margin-bottom: 5px; }
         .legend-item i { width: 14px; height: 14px; margin-right: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0; }
 
-        .source-mention { font-size: 0.75em; color: #94a3b8; margin-top: auto; padding-top: 20px; text-align: center; }
+        .source-mention { font-size: 0.75em; color: #94a3b8; margin-top: auto; padding-top: 20px; text-align: center; line-height: 1.4; }
         .source-mention a { color: #3b82f6; text-decoration: none; }
         select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #fed7aa; margin-top: 8px; cursor: pointer; }
     </style>
@@ -78,7 +79,7 @@
     const monthNames = ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sept", "Oct", "Nov", "Déc"];
 
     function getColor(t) {
-        return t > 0 ? '#22c55e' : t > -5 ? '#84cc16' : t > -8 ? '#eab308' : t > -10 ? '#f97316' : t > -12 ? '#ef4444' : t > -15 ? '#dc2626' : '#7f1d1d';
+        return t > 0 ? '#16a34a' : t > -5 ? '#84cc16' : t > -8 ? '#eab308' : t > -10 ? '#f97316' : t > -12 ? '#ef4444' : t > -15 ? '#dc2626' : '#7f1d1d';
     }
 
     fetch('agrumes.json').then(res => res.json()).then(data => { agrumesData = data; });
@@ -116,7 +117,6 @@
         const container = document.getElementById('agrumes-container');
         container.innerHTML = "";
 
-        // Nouvelle logique de tri et catégorie
         const processed = agrumesData.map(agr => {
             const survitArbre = minAbs > agr.seuil_arbre;
             let moisSains = [];
@@ -133,8 +133,8 @@
 
             if (!survitArbre) { statut = "ko"; priorite = 4; }
             else if (moisGeles.length === 0) { statut = "ok"; priorite = 1; }
-            else if (moisSains.length > 0) { statut = "early"; priorite = 2; } // On peut récolter certains mois
-            else { statut = "warning"; priorite = 3; } // Tout est gelé
+            else if (moisSains.length > 0) { statut = "early"; priorite = 2; }
+            else { statut = "warning"; priorite = 3; }
 
             return { ...agr, statut, priorite, moisGeles, moisSains };
         }).sort((a, b) => a.priorite - b.priorite);
@@ -149,10 +149,10 @@
             if (agr.statut === "ko") {
                 card.innerHTML = `<strong>❌ ${agr.nom}</strong><br><small>Arbre gélif (Limite : ${agr.seuil_arbre}°C)</small><br>${badgeRecolte}`;
             } else if (agr.statut === "ok") {
-                card.innerHTML = `<strong>✅ ${agr.nom}</strong><br><small>Récolte sécurisée sur toute la période.</small><br>${badgeRecolte}`;
+                card.innerHTML = `<strong>✅ ${agr.nom}</strong><br><small>Récolte et arbre sécurisés.</small><br>${badgeRecolte}`;
             } else if (agr.statut === "early") {
                 const moisOK = agr.moisSains.map(m => monthNames[m-1]).join(', ');
-                card.innerHTML = `<strong>✨ ${agr.nom} (Opportunité)</strong><br><small>Récolte possible avant le gel en : <b>${moisOK}</b>.</small><br>${badgeRecolte}`;
+                card.innerHTML = `<strong>✨ ${agr.nom}</strong><br><small>Récolte possible avant le gel en : <b>${moisOK}</b>.</small><br>${badgeRecolte}`;
             } else {
                 const alertes = agr.moisGeles.map(obj => `${monthNames[obj.m-1]} (<span class="temp-tag">${obj.tMin}°C</span>)`).join(' ');
                 card.innerHTML = `<strong>⚠️ ${agr.nom}</strong><br><small>Fruits systématiquement gelés :</small><div style="margin-top:5px; font-size:0.85em;">${alertes}</div>${badgeRecolte}`;
