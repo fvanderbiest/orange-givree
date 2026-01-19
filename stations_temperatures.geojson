@@ -20370,6 +20370,112 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 13103004,
+        "nom": "SALON-DE-PROVENCE-INRAE",
+        "last_5y": {
+          "min_absolute": -5.3,
+          "by_month": {
+            "month_9": 7.0,
+            "month_10": 5.8,
+            "month_11": -3.2,
+            "month_12": -3.1,
+            "month_1": -5.3,
+            "month_2": -2.9,
+            "month_3": -2.6,
+            "month_4": -0.1
+          }
+        },
+        "last_10y": {
+          "min_absolute": -5.3,
+          "by_month": {
+            "month_9": 5.9,
+            "month_10": 2.9,
+            "month_11": -3.2,
+            "month_12": -3.1,
+            "month_1": -5.3,
+            "month_2": -5.3,
+            "month_3": -2.6,
+            "month_4": -0.1
+          }
+        },
+        "last_20y": {
+          "min_absolute": -8.3,
+          "by_month": {
+            "month_9": 5.9,
+            "month_10": 1.8,
+            "month_11": -3.9,
+            "month_12": -4.1,
+            "month_1": -6.1,
+            "month_2": -8.3,
+            "month_3": -2.6,
+            "month_4": -0.1
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.993667,
+          43.6425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 84007002,
+        "nom": "AVIGNON-INRAE",
+        "last_5y": {
+          "min_absolute": -4.9,
+          "by_month": {
+            "month_9": 8.8,
+            "month_10": 4.9,
+            "month_11": -3.1,
+            "month_12": -4.3,
+            "month_1": -4.9,
+            "month_2": -4.8,
+            "month_3": -2.5,
+            "month_4": -2.7
+          }
+        },
+        "last_10y": {
+          "min_absolute": -6.0,
+          "by_month": {
+            "month_9": 6.1,
+            "month_10": 3.3,
+            "month_11": -3.1,
+            "month_12": -4.3,
+            "month_1": -4.9,
+            "month_2": -6.0,
+            "month_3": -2.5,
+            "month_4": -2.7
+          }
+        },
+        "last_20y": {
+          "min_absolute": -7.6,
+          "by_month": {
+            "month_9": 6.1,
+            "month_10": -1.0,
+            "month_11": -4.6,
+            "month_12": -5.2,
+            "month_1": -7.6,
+            "month_2": -7.4,
+            "month_3": -3.5,
+            "month_4": -2.7
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.876667,
+          43.916667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 88029001,
         "nom": "BAINS",
         "last_5y": {
@@ -38433,6 +38539,112 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 73047403,
+        "nom": "REFUGE DES EVETTES",
+        "last_5y": {
+          "min_absolute": -0.1,
+          "by_month": {
+            "month_9": -0.1,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -0.1,
+          "by_month": {
+            "month_9": -0.1,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -0.1,
+          "by_month": {
+            "month_9": -0.1,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.1065,
+          45.368167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 73280404,
+        "nom": "REFUGE DE L'ETENDARD",
+        "last_5y": {
+          "min_absolute": -5.9,
+          "by_month": {
+            "month_9": -5.9,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -5.9,
+          "by_month": {
+            "month_9": -5.9,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -5.9,
+          "by_month": {
+            "month_9": -5.9,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.175167,
+          45.203667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 89003001,
         "nom": "AILLANT",
         "last_5y": {
@@ -42461,6 +42673,112 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 91272001,
+        "nom": "GIF-SUR-YVETTE-INRAE",
+        "last_5y": {
+          "min_absolute": -7.0,
+          "by_month": {
+            "month_9": 3.6,
+            "month_10": 1.0,
+            "month_11": -3.0,
+            "month_12": -6.2,
+            "month_1": -4.6,
+            "month_2": -7.0,
+            "month_3": -2.0,
+            "month_4": -2.5
+          }
+        },
+        "last_10y": {
+          "min_absolute": -8.0,
+          "by_month": {
+            "month_9": 3.6,
+            "month_10": 1.0,
+            "month_11": -3.9,
+            "month_12": -6.2,
+            "month_1": -6.6,
+            "month_2": -8.0,
+            "month_3": -5.1,
+            "month_4": -2.5
+          }
+        },
+        "last_20y": {
+          "min_absolute": -11.2,
+          "by_month": {
+            "month_9": 3.6,
+            "month_10": -0.5,
+            "month_11": -3.9,
+            "month_12": -6.3,
+            "month_1": -11.1,
+            "month_2": -11.2,
+            "month_3": -9.9,
+            "month_4": -2.5
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.151,
+          48.714333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6163400,
+        "nom": "VAL CASTERINO_NEIGE",
+        "last_5y": {
+          "min_absolute": -17.0,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": -2.0,
+            "month_12": -5.0,
+            "month_1": -17.0,
+            "month_2": -14.0,
+            "month_3": -8.0,
+            "month_4": -9.0
+          }
+        },
+        "last_10y": {
+          "min_absolute": -22.0,
+          "by_month": {
+            "month_9": -5.0,
+            "month_10": -4.5,
+            "month_11": -5.0,
+            "month_12": -15.0,
+            "month_1": -17.0,
+            "month_2": -22.0,
+            "month_3": -19.0,
+            "month_4": -9.0
+          }
+        },
+        "last_20y": {
+          "min_absolute": -22.0,
+          "by_month": {
+            "month_9": -5.0,
+            "month_10": -9.0,
+            "month_11": -17.0,
+            "month_12": -18.0,
+            "month_1": -17.0,
+            "month_2": -22.0,
+            "month_3": -19.0,
+            "month_4": -9.0
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.505833,
+          44.0975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 47004001,
         "nom": "AIGUILLON",
         "last_5y": {
@@ -45287,6 +45605,218 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 65031003,
+        "nom": "ARREAU-SPC",
+        "last_5y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -11.0,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": -7.0,
+            "month_1": -11.0,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.361,
+          42.903833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 65138007,
+        "nom": "REFUGE WALLON",
+        "last_5y": {
+          "min_absolute": -10.0,
+          "by_month": {
+            "month_9": 2.5,
+            "month_10": 2.9,
+            "month_11": null,
+            "month_12": -1.1,
+            "month_1": -10.0,
+            "month_2": -7.7,
+            "month_3": -10.0,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -10.0,
+          "by_month": {
+            "month_9": 2.5,
+            "month_10": 2.9,
+            "month_11": null,
+            "month_12": -1.1,
+            "month_1": -10.0,
+            "month_2": -7.7,
+            "month_3": -10.0,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -17.8,
+          "by_month": {
+            "month_9": -3.4,
+            "month_10": -8.3,
+            "month_11": -13.0,
+            "month_12": -15.8,
+            "month_1": -15.7,
+            "month_2": -17.8,
+            "month_3": -15.5,
+            "month_4": -10.4
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.194667,
+          42.820333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 65138008,
+        "nom": "REF OULETTES",
+        "last_5y": {
+          "min_absolute": -11.7,
+          "by_month": {
+            "month_9": -2.2,
+            "month_10": -0.1,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": -8.0,
+            "month_3": -11.7,
+            "month_4": -9.7
+          }
+        },
+        "last_10y": {
+          "min_absolute": -11.7,
+          "by_month": {
+            "month_9": -2.2,
+            "month_10": -0.1,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": -8.0,
+            "month_3": -11.7,
+            "month_4": -9.7
+          }
+        },
+        "last_20y": {
+          "min_absolute": -18.6,
+          "by_month": {
+            "month_9": -5.6,
+            "month_10": -8.8,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": -11.4,
+            "month_3": -18.6,
+            "month_4": -11.8
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1415,
+          42.792833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 65465001,
+        "nom": "REF DU BASTANET",
+        "last_5y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -4.9,
+          "by_month": {
+            "month_9": -4.9,
+            "month_10": -4.1,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.209667,
+          42.853167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 26002003,
         "nom": "ALBON",
         "last_5y": {
@@ -47986,6 +48516,59 @@
         "coordinates": [
           4.828833,
           45.1125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 30117002,
+        "nom": "FOURQUES-INRAE",
+        "last_5y": {
+          "min_absolute": -3.5,
+          "by_month": {
+            "month_9": 8.7,
+            "month_10": 6.5,
+            "month_11": -3.0,
+            "month_12": -2.7,
+            "month_1": -3.5,
+            "month_2": -2.7,
+            "month_3": -2.0,
+            "month_4": -1.7
+          }
+        },
+        "last_10y": {
+          "min_absolute": -6.2,
+          "by_month": {
+            "month_9": 7.4,
+            "month_10": 4.8,
+            "month_11": -3.0,
+            "month_12": -2.7,
+            "month_1": -3.5,
+            "month_2": -6.2,
+            "month_3": -2.0,
+            "month_4": -1.7
+          }
+        },
+        "last_20y": {
+          "min_absolute": -6.8,
+          "by_month": {
+            "month_9": 7.0,
+            "month_10": 0.1,
+            "month_11": -3.9,
+            "month_12": -5.3,
+            "month_1": -5.1,
+            "month_2": -6.8,
+            "month_3": -3.3,
+            "month_4": -1.7
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.558333,
+          43.706667
         ]
       }
     },
@@ -66797,6 +67380,59 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 20303001,
+        "nom": "SAN GIULIANO-INRAE",
+        "last_5y": {
+          "min_absolute": -1.7,
+          "by_month": {
+            "month_9": 8.6,
+            "month_10": 6.0,
+            "month_11": -1.0,
+            "month_12": -0.8,
+            "month_1": -1.6,
+            "month_2": -1.7,
+            "month_3": -1.2,
+            "month_4": -1.1
+          }
+        },
+        "last_10y": {
+          "min_absolute": -3.6,
+          "by_month": {
+            "month_9": 7.9,
+            "month_10": 5.1,
+            "month_11": -1.0,
+            "month_12": -2.7,
+            "month_1": -3.6,
+            "month_2": -2.6,
+            "month_3": -1.2,
+            "month_4": -1.1
+          }
+        },
+        "last_20y": {
+          "min_absolute": -5.3,
+          "by_month": {
+            "month_9": 7.9,
+            "month_10": 3.8,
+            "month_11": -1.3,
+            "month_12": -4.1,
+            "month_1": -3.6,
+            "month_2": -5.3,
+            "month_3": -3.6,
+            "month_4": -1.1
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.521667,
+          42.286667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 51015001,
         "nom": "ARGERS",
         "last_5y": {
@@ -72595,6 +73231,59 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 42332001,
+        "nom": "VILLEREST-BARRAGE-SPC",
+        "last_5y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -9.5,
+          "by_month": {
+            "month_9": 2.9,
+            "month_10": -2.4,
+            "month_11": -5.7,
+            "month_12": -8.9,
+            "month_1": -9.3,
+            "month_2": -9.5,
+            "month_3": -5.9,
+            "month_4": -1.3
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.044333,
+          45.987833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 48014001,
         "nom": "BAGNOLS",
         "last_10y": {
@@ -73878,6 +74567,59 @@
         "coordinates": [
           1.743667,
           47.610667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 21106001,
+        "nom": "BRETENIERES_INRAE",
+        "last_5y": {
+          "min_absolute": -9.3,
+          "by_month": {
+            "month_9": 2.8,
+            "month_10": -0.9,
+            "month_11": -4.5,
+            "month_12": -6.7,
+            "month_1": -7.2,
+            "month_2": -9.3,
+            "month_3": -4.1,
+            "month_4": -5.0
+          }
+        },
+        "last_10y": {
+          "min_absolute": -11.6,
+          "by_month": {
+            "month_9": 2.8,
+            "month_10": -0.9,
+            "month_11": -4.7,
+            "month_12": -6.7,
+            "month_1": -9.6,
+            "month_2": -11.6,
+            "month_3": -4.6,
+            "month_4": -5.0
+          }
+        },
+        "last_20y": {
+          "min_absolute": -20.2,
+          "by_month": {
+            "month_9": 1.6,
+            "month_10": -4.2,
+            "month_11": -5.6,
+            "month_12": -20.2,
+            "month_1": -11.5,
+            "month_2": -13.5,
+            "month_3": -7.0,
+            "month_4": -5.0
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.102333,
+          47.239167
         ]
       }
     },
@@ -75939,6 +76681,59 @@
         "coordinates": [
           2.760833,
           42.5365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 78615002,
+        "nom": "THIVERVAL-INRAE",
+        "last_5y": {
+          "min_absolute": -7.9,
+          "by_month": {
+            "month_9": 3.7,
+            "month_10": 1.0,
+            "month_11": -3.2,
+            "month_12": -6.1,
+            "month_1": -5.5,
+            "month_2": -7.9,
+            "month_3": -4.0,
+            "month_4": -3.8
+          }
+        },
+        "last_10y": {
+          "min_absolute": -9.7,
+          "by_month": {
+            "month_9": 2.1,
+            "month_10": -0.1,
+            "month_11": -5.4,
+            "month_12": -6.1,
+            "month_1": -7.4,
+            "month_2": -9.7,
+            "month_3": -4.6,
+            "month_4": -3.8
+          }
+        },
+        "last_20y": {
+          "min_absolute": -13.9,
+          "by_month": {
+            "month_9": 2.1,
+            "month_10": -2.1,
+            "month_11": -7.1,
+            "month_12": -8.2,
+            "month_1": -13.9,
+            "month_2": -12.6,
+            "month_3": -10.2,
+            "month_4": -3.8
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.953167,
+          48.838167
         ]
       }
     },
@@ -86385,6 +87180,99 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 45229001,
+        "nom": "NOGENT-SUR-V.",
+        "last_10y": {
+          "min_absolute": -11.4,
+          "by_month": {
+            "month_9": 1.7,
+            "month_10": -1.3,
+            "month_11": -5.3,
+            "month_12": -6.0,
+            "month_1": -9.5,
+            "month_2": -11.4,
+            "month_3": -3.7,
+            "month_4": -3.9
+          }
+        },
+        "last_20y": {
+          "min_absolute": -13.2,
+          "by_month": {
+            "month_9": 1.7,
+            "month_10": -2.8,
+            "month_11": -6.2,
+            "month_12": -10.4,
+            "month_1": -12.8,
+            "month_2": -13.2,
+            "month_3": -5.6,
+            "month_4": -3.9
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.757667,
+          47.834833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 45234009,
+        "nom": "ORLEANS-INRAE",
+        "last_5y": {
+          "min_absolute": -10.2,
+          "by_month": {
+            "month_9": 0.8,
+            "month_10": -2.0,
+            "month_11": -4.4,
+            "month_12": -8.3,
+            "month_1": -8.8,
+            "month_2": -10.2,
+            "month_3": -6.1,
+            "month_4": -6.4
+          }
+        },
+        "last_10y": {
+          "min_absolute": -10.9,
+          "by_month": {
+            "month_9": 0.8,
+            "month_10": -2.4,
+            "month_11": -6.4,
+            "month_12": -8.3,
+            "month_1": -10.9,
+            "month_2": -10.6,
+            "month_3": -6.1,
+            "month_4": -6.4
+          }
+        },
+        "last_20y": {
+          "min_absolute": -12.0,
+          "by_month": {
+            "month_9": 0.5,
+            "month_10": -4.6,
+            "month_11": -6.4,
+            "month_12": -9.4,
+            "month_1": -10.9,
+            "month_2": -12.0,
+            "month_3": -7.5,
+            "month_4": -6.4
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.909333,
+          47.827167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 25021001,
         "nom": "ARC-ET-SENANS",
         "last_5y": {
@@ -88827,6 +89715,59 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 12232001,
+        "nom": "ST JEAN ST PAUL-INRAE",
+        "last_5y": {
+          "min_absolute": -8.2,
+          "by_month": {
+            "month_9": 2.6,
+            "month_10": 1.6,
+            "month_11": -6.4,
+            "month_12": -8.2,
+            "month_1": -8.0,
+            "month_2": -5.5,
+            "month_3": -5.5,
+            "month_4": -5.6
+          }
+        },
+        "last_10y": {
+          "min_absolute": -13.8,
+          "by_month": {
+            "month_9": 2.3,
+            "month_10": -1.4,
+            "month_11": -6.4,
+            "month_12": -8.2,
+            "month_1": -10.7,
+            "month_2": -13.8,
+            "month_3": -5.5,
+            "month_4": -5.6
+          }
+        },
+        "last_20y": {
+          "min_absolute": -15.1,
+          "by_month": {
+            "month_9": 1.9,
+            "month_10": -3.4,
+            "month_11": -7.2,
+            "month_12": -11.6,
+            "month_1": -11.3,
+            "month_2": -15.1,
+            "month_3": -10.3,
+            "month_4": -5.6
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.003333,
+          43.923333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 95018002,
         "nom": "ARGENTEUIL",
         "last_20y": {
@@ -89967,6 +90908,59 @@
         "coordinates": [
           7.107167,
           47.803667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11170001,
+        "nom": "GRUISSAN-INRAE",
+        "last_5y": {
+          "min_absolute": -3.0,
+          "by_month": {
+            "month_9": 7.3,
+            "month_10": 3.8,
+            "month_11": 0.8,
+            "month_12": -1.6,
+            "month_1": -3.0,
+            "month_2": -2.3,
+            "month_3": 0.3,
+            "month_4": 1.2
+          }
+        },
+        "last_10y": {
+          "min_absolute": -6.9,
+          "by_month": {
+            "month_9": 7.3,
+            "month_10": 3.8,
+            "month_11": -0.8,
+            "month_12": -1.8,
+            "month_1": -3.0,
+            "month_2": -6.9,
+            "month_3": 0.3,
+            "month_4": 0.3
+          }
+        },
+        "last_20y": {
+          "min_absolute": -7.4,
+          "by_month": {
+            "month_9": 7.3,
+            "month_10": 2.3,
+            "month_11": -3.4,
+            "month_12": -4.6,
+            "month_1": -4.2,
+            "month_2": -7.4,
+            "month_3": -3.2,
+            "month_4": 0.3
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1355,
+          43.143167
         ]
       }
     },
@@ -94254,6 +95248,590 @@
         "coordinates": [
           2.09,
           48.803333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 38334400,
+        "nom": "REFUGE DE LA PRA",
+        "last_5y": {
+          "min_absolute": -4.5,
+          "by_month": {
+            "month_9": -4.5,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -4.5,
+          "by_month": {
+            "month_9": -4.5,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -4.5,
+          "by_month": {
+            "month_9": -4.5,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.944833,
+          45.161167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 38375405,
+        "nom": "REFUGE DU PROMONTOIRE",
+        "last_5y": {
+          "min_absolute": -5.7,
+          "by_month": {
+            "month_9": 0.9,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -5.7,
+          "by_month": {
+            "month_9": 0.9,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -5.7,
+          "by_month": {
+            "month_9": 0.9,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.303167,
+          44.998333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 38375406,
+        "nom": "REFUGE DE TEMPLE ECRINS",
+        "last_5y": {
+          "min_absolute": -2.7,
+          "by_month": {
+            "month_9": -2.7,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -2.7,
+          "by_month": {
+            "month_9": -2.7,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -2.7,
+          "by_month": {
+            "month_9": -2.7,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.332333,
+          44.904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 38522400,
+        "nom": "REFUGE DE FONT TURBA",
+        "last_5y": {
+          "min_absolute": 0.3,
+          "by_month": {
+            "month_9": 0.3,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": 0.3,
+          "by_month": {
+            "month_9": 0.3,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": 0.3,
+          "by_month": {
+            "month_9": 0.3,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.178,
+          44.864667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 77142002,
+        "nom": "CRECY-SPC",
+        "last_5y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -13.6,
+          "by_month": {
+            "month_9": 3.4,
+            "month_10": -3.0,
+            "month_11": -8.0,
+            "month_12": -8.0,
+            "month_1": -13.6,
+            "month_2": -7.0,
+            "month_3": -4.0,
+            "month_4": -1.5
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.924833,
+          48.869167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 77168003,
+        "nom": "EGREVILLE_SPC",
+        "last_5y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -6.2,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": -6.2,
+            "month_2": -3.2,
+            "month_3": -3.3,
+            "month_4": -0.6
+          }
+        },
+        "last_20y": {
+          "min_absolute": -16.2,
+          "by_month": {
+            "month_9": 4.0,
+            "month_10": -2.1,
+            "month_11": -6.8,
+            "month_12": -7.8,
+            "month_1": -7.4,
+            "month_2": -16.2,
+            "month_3": -5.1,
+            "month_4": -2.9
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.860167,
+          48.184333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 77207001,
+        "nom": "GIRONVILLE",
+        "last_10y": {
+          "min_absolute": -12.3,
+          "by_month": {
+            "month_9": 2.8,
+            "month_10": -1.8,
+            "month_11": -5.8,
+            "month_12": -6.8,
+            "month_1": -10.7,
+            "month_2": -12.3,
+            "month_3": -3.8,
+            "month_4": -4.4
+          }
+        },
+        "last_20y": {
+          "min_absolute": -14.1,
+          "by_month": {
+            "month_9": 1.3,
+            "month_10": -4.4,
+            "month_11": -8.6,
+            "month_12": -13.8,
+            "month_1": -13.0,
+            "month_2": -14.1,
+            "month_3": -7.6,
+            "month_4": -4.6
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.525,
+          48.161667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 77303001,
+        "nom": "MONTDAUPHIN-SPC",
+        "last_5y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -14.1,
+          "by_month": {
+            "month_9": 2.1,
+            "month_10": -2.7,
+            "month_11": -9.0,
+            "month_12": -9.3,
+            "month_1": -11.5,
+            "month_2": -14.1,
+            "month_3": -10.6,
+            "month_4": -3.3
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.421667,
+          48.853333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 77405002,
+        "nom": "ST-CYR-MORIN-SPC",
+        "last_5y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -14.0,
+          "by_month": {
+            "month_9": 4.2,
+            "month_10": -2.1,
+            "month_11": -7.0,
+            "month_12": -9.0,
+            "month_1": -14.0,
+            "month_2": -7.3,
+            "month_3": -7.6,
+            "month_4": -0.8
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.206167,
+          48.927333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 77469003,
+        "nom": "TOUQUIN-SPC",
+        "last_5y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -8.7,
+          "by_month": {
+            "month_9": 6.9,
+            "month_10": -1.4,
+            "month_11": -5.7,
+            "month_12": -6.3,
+            "month_1": -8.7,
+            "month_2": -5.3,
+            "month_3": -4.2,
+            "month_4": -2.1
+          }
+        },
+        "last_20y": {
+          "min_absolute": -18.3,
+          "by_month": {
+            "month_9": 2.3,
+            "month_10": -2.0,
+            "month_11": -6.4,
+            "month_12": -10.3,
+            "month_1": -18.3,
+            "month_2": -8.2,
+            "month_3": -9.3,
+            "month_4": -2.3
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.010667,
+          48.727833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 77490001,
+        "nom": "VENDREST-SPC",
+        "last_10y": {
+          "min_absolute": -7.7,
+          "by_month": {
+            "month_9": 5.9,
+            "month_10": -0.7,
+            "month_11": -5.2,
+            "month_12": -6.1,
+            "month_1": -7.7,
+            "month_2": -4.7,
+            "month_3": -4.1,
+            "month_4": -1.2
+          }
+        },
+        "last_20y": {
+          "min_absolute": -13.1,
+          "by_month": {
+            "month_9": 1.4,
+            "month_10": -2.5,
+            "month_11": -7.1,
+            "month_12": -9.9,
+            "month_1": -11.6,
+            "month_2": -13.1,
+            "month_3": -12.1,
+            "month_4": -3.1
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.091667,
+          49.046667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 77507001,
+        "nom": "VILLENAUXE-SPC",
+        "last_20y": {
+          "min_absolute": -12.0,
+          "by_month": {
+            "month_9": 1.6,
+            "month_10": -4.5,
+            "month_11": -10.0,
+            "month_12": -10.0,
+            "month_1": -12.0,
+            "month_2": -7.5,
+            "month_3": -8.0,
+            "month_4": -2.7
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.315333,
+          48.430167
         ]
       }
     },
@@ -140919,6 +142497,59 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 66002001,
+        "nom": "ALENYA-INRAE",
+        "last_5y": {
+          "min_absolute": -16.5,
+          "by_month": {
+            "month_9": 8.3,
+            "month_10": 5.5,
+            "month_11": -2.0,
+            "month_12": -12.6,
+            "month_1": -4.1,
+            "month_2": -16.5,
+            "month_3": -0.7,
+            "month_4": 0.7
+          }
+        },
+        "last_10y": {
+          "min_absolute": -16.5,
+          "by_month": {
+            "month_9": 8.3,
+            "month_10": 4.2,
+            "month_11": -2.0,
+            "month_12": -12.6,
+            "month_1": -4.8,
+            "month_2": -16.5,
+            "month_3": -0.7,
+            "month_4": 0.7
+          }
+        },
+        "last_20y": {
+          "min_absolute": -16.5,
+          "by_month": {
+            "month_9": 6.5,
+            "month_10": 1.5,
+            "month_11": -3.2,
+            "month_12": -12.6,
+            "month_1": -5.2,
+            "month_2": -16.5,
+            "month_3": -6.2,
+            "month_4": 0.7
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.966667,
+          42.638333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 76043001,
         "nom": "AUZEBOSC",
         "last_20y": {
@@ -143664,6 +145295,245 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 9030010,
+        "nom": "BASSIES",
+        "last_5y": {
+          "min_absolute": -0.3,
+          "by_month": {
+            "month_9": -0.3,
+            "month_10": 1.1,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -0.3,
+          "by_month": {
+            "month_9": -0.3,
+            "month_10": 1.1,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -18.0,
+          "by_month": {
+            "month_9": -3.0,
+            "month_10": -8.5,
+            "month_11": -12.0,
+            "month_12": -12.5,
+            "month_1": -15.0,
+            "month_2": -18.0,
+            "month_3": -14.0,
+            "month_4": -8.0
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.413333,
+          42.7655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9030015,
+        "nom": "LE FOURCAT",
+        "last_5y": {
+          "min_absolute": -4.5,
+          "by_month": {
+            "month_9": -4.5,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -4.5,
+          "by_month": {
+            "month_9": -4.5,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -4.5,
+          "by_month": {
+            "month_9": -4.5,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.489333,
+          42.665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9062002,
+        "nom": "ESTAGNOUS",
+        "last_5y": {
+          "min_absolute": -3.6,
+          "by_month": {
+            "month_9": -3.6,
+            "month_10": 9.6,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -3.6,
+          "by_month": {
+            "month_9": -3.6,
+            "month_10": 9.6,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -8.0,
+          "by_month": {
+            "month_9": -5.9,
+            "month_10": -8.0,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.072667,
+          42.797333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9220003,
+        "nom": "EN BEYS",
+        "last_5y": {
+          "min_absolute": -1.2,
+          "by_month": {
+            "month_9": -1.2,
+            "month_10": 11.0,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -1.2,
+          "by_month": {
+            "month_9": -1.2,
+            "month_10": 11.0,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -5.5,
+          "by_month": {
+            "month_9": -5.5,
+            "month_10": 11.0,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.944167,
+          42.6265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9290006,
+        "nom": "ARAING",
+        "last_20y": {
+          "min_absolute": -4.6,
+          "by_month": {
+            "month_9": -4.6,
+            "month_10": -4.5,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.873667,
+          42.834667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 92025001,
         "nom": "COLOMBES",
         "last_10y": {
@@ -144272,6 +146142,152 @@
         "coordinates": [
           8.999833,
           42.517833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 34205002,
+        "nom": "LES PLANS-SPC",
+        "last_5y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": null,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": 5.0,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": 5.0,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.243,
+          43.761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5093403,
+        "nom": "NEVACHE-BUFFERE",
+        "last_10y": {
+          "min_absolute": -16.9,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": -14.3,
+            "month_1": -15.9,
+            "month_2": -16.9,
+            "month_3": -14.4,
+            "month_4": -9.9
+          }
+        },
+        "last_20y": {
+          "min_absolute": -21.3,
+          "by_month": {
+            "month_9": null,
+            "month_10": null,
+            "month_11": null,
+            "month_12": -16.4,
+            "month_1": -17.0,
+            "month_2": -21.3,
+            "month_3": -17.6,
+            "month_4": -11.7
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.570833,
+          45.012833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5181400,
+        "nom": "REFUGE ADELE PLANCHARD",
+        "last_5y": {
+          "min_absolute": -10.8,
+          "by_month": {
+            "month_9": -10.8,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_10y": {
+          "min_absolute": -10.8,
+          "by_month": {
+            "month_9": -10.8,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        },
+        "last_20y": {
+          "min_absolute": -10.8,
+          "by_month": {
+            "month_9": -10.8,
+            "month_10": null,
+            "month_11": null,
+            "month_12": null,
+            "month_1": null,
+            "month_2": null,
+            "month_3": null,
+            "month_4": null
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.340167,
+          44.98
         ]
       }
     },
