@@ -1958,14 +1958,6 @@
     ]
   },
   {
-    "nom": "Kaki Fuyu",
-    "seuil_arbre": -20,
-    "seuil_fruit": -5,
-    "recolte": [
-      11
-    ]
-  },
-  {
     "nom": "Satsuma Owari Francis Soules",
     "seuil_arbre": -14,
     "seuil_fruit": -5,
