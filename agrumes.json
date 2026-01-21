@@ -2,7 +2,7 @@
   {
     "nom": "Main de Bouddha panaché",
     "seuil_arbre": -5,
-    "seuil_fruit": -3,
+    "seuil_fruit": 0,
     "recolte": [
       11
     ]
@@ -30,7 +30,7 @@
   {
     "nom": "Castello panaché",
     "seuil_arbre": -8,
-    "seuil_fruit": -3,
+    "seuil_fruit": -2,
     "recolte": [
       12,
       1,
@@ -58,8 +58,8 @@
   },
   {
     "nom": "Calamondin",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
+    "seuil_arbre": -2,
+    "seuil_fruit": 0,
     "recolte": [
       3,
       4,
@@ -385,7 +385,7 @@
   {
     "nom": "Tangelo Samson",
     "seuil_arbre": -8,
-    "seuil_fruit": -3,
+    "seuil_fruit": -2,
     "recolte": [
       12,
       1,
@@ -395,7 +395,7 @@
   {
     "nom": "Tangelo Thomson",
     "seuil_arbre": -9,
-    "seuil_fruit": -3,
+    "seuil_fruit": -2,
     "recolte": [
       10,
       11,
@@ -666,7 +666,7 @@
   {
     "nom": "Mandarine Shangsa",
     "seuil_arbre": -14,
-    "seuil_fruit": -3,
+    "seuil_fruit": -5,
     "recolte": [
       10,
       11,
@@ -698,7 +698,7 @@
   {
     "nom": "Tangelo Mapo",
     "seuil_arbre": -9,
-    "seuil_fruit": -3,
+    "seuil_fruit": -2,
     "recolte": [
       11,
       12
@@ -734,7 +734,7 @@
   {
     "nom": "Kinkoji",
     "seuil_arbre": -14,
-    "seuil_fruit": -3,
+    "seuil_fruit": -5,
     "recolte": [
       11,
       12
@@ -743,7 +743,7 @@
   {
     "nom": "Kabosu",
     "seuil_arbre": -14,
-    "seuil_fruit": -3,
+    "seuil_fruit": -8,
     "recolte": [
       10,
       11
@@ -828,7 +828,7 @@
   {
     "nom": "Tangelo Orlando",
     "seuil_arbre": -9,
-    "seuil_fruit": -3,
+    "seuil_fruit": -2,
     "recolte": [
       11,
       12
@@ -837,7 +837,7 @@
   {
     "nom": "Tangelo Pearl",
     "seuil_arbre": -9,
-    "seuil_fruit": -3,
+    "seuil_fruit": -2,
     "recolte": [
       11,
       12
@@ -991,7 +991,7 @@
   {
     "nom": "Tangelo zesty BA9",
     "seuil_arbre": -9,
-    "seuil_fruit": -3,
+    "seuil_fruit": -2,
     "recolte": [
       10,
       11,
@@ -1028,7 +1028,7 @@
   {
     "nom": "Citsuma de Prague",
     "seuil_arbre": -15,
-    "seuil_fruit": -3,
+    "seuil_fruit": -4,
     "recolte": [
       11,
       12,
@@ -1085,7 +1085,7 @@
   {
     "nom": "Mandarine Keraji Kabushi",
     "seuil_arbre": -12,
-    "seuil_fruit": -3,
+    "seuil_fruit": -5,
     "recolte": [
       10,
       11,
@@ -1320,7 +1320,7 @@
     ]
   },
   {
-    "nom": "Tangelo Subarashi",
+    "nom": "Tangelo Subarashi / Shiranui / Dekopon",
     "seuil_arbre": -8,
     "seuil_fruit": -3,
     "recolte": [
@@ -1525,7 +1525,7 @@
   {
     "nom": "Ichanglemon Wagashi",
     "seuil_arbre": -12,
-    "seuil_fruit": -3,
+    "seuil_fruit": -5,
     "recolte": [
       11
     ]
@@ -1688,7 +1688,7 @@
   {
     "nom": "Tangelo Mineola",
     "seuil_arbre": -10,
-    "seuil_fruit": -3,
+    "seuil_fruit": -2,
     "recolte": [
       11,
       12
@@ -1785,7 +1785,7 @@
   {
     "nom": "Tangelo Lo wekiwa",
     "seuil_arbre": -9,
-    "seuil_fruit": -3,
+    "seuil_fruit": -2,
     "recolte": [
       11,
       12
@@ -1834,7 +1834,7 @@
   {
     "nom": "Mandarine Keraji Voss D14",
     "seuil_arbre": -14,
-    "seuil_fruit": -3,
+    "seuil_fruit": -5,
     "recolte": [
       9,
       10,
@@ -1871,7 +1871,7 @@
   {
     "nom": "Ichanglemon",
     "seuil_arbre": -14,
-    "seuil_fruit": -3,
+    "seuil_fruit": -5,
     "recolte": [
       11,
       12
@@ -1951,7 +1951,7 @@
   {
     "nom": "Mandarine Keraji",
     "seuil_arbre": -12,
-    "seuil_fruit": -3,
+    "seuil_fruit": -5,
     "recolte": [
       9,
       10,
@@ -2097,7 +2097,7 @@
   {
     "nom": "Ichanglemon Shenguyen",
     "seuil_arbre": -15,
-    "seuil_fruit": -3,
+    "seuil_fruit": -5,
     "recolte": [
       11,
       12
