@@ -57,6 +57,14 @@
     ]
   },
   {
+    "nom": "Orange Violette des Vallées",
+    "seuil_arbre": -8,
+    "seuil_fruit": -3,
+    "recolte": [
+      12
+    ]
+  },
+  {
     "nom": "Calamondin",
     "seuil_arbre": -2,
     "seuil_fruit": 0,
@@ -1951,6 +1959,16 @@
     ]
   },
   {
+    "nom": "Lime Karna Khatta",
+    "seuil_arbre": -12,
+    "seuil_fruit": -6,
+    "recolte": [
+      11,
+      12,
+      1
+    ]
+  },
+  {
     "nom": "Mandarine Keraji",
     "seuil_arbre": -12,
     "seuil_fruit": -5,
@@ -1958,6 +1976,40 @@
       9,
       10,
       11
+    ]
+  },
+  {
+    "nom": "Mandarine Juanita",
+    "seuil_arbre": -10,
+    "seuil_fruit": -4,
+    "recolte": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "nom": "Kiyomi",
+    "seuil_arbre": -9,
+    "seuil_fruit": -3,
+    "recolte": [
+      12
+    ]
+  },
+  {
+    "nom": "Haruka",
+    "seuil_arbre": -8,
+    "seuil_fruit": -3,
+    "recolte": [
+      3, 4, 5
+    ]
+  },
+  {
+    "nom": "Orangequat 46",
+    "seuil_arbre": -12,
+    "seuil_fruit": -4,
+    "recolte": [
+      2, 3, 4, 5
     ]
   },
   {
