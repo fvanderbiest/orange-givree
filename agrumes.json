@@ -822,7 +822,8 @@
     "seuil_arbre": -11,
     "seuil_fruit": -3,
     "recolte": [
-      10
+      10,
+      11
     ]
   },
   {
