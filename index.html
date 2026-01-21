@@ -373,7 +373,7 @@
                   <span class="limits-tag">Arbre : ${agr.seuil_arbre}° | Fruits : ${agr.seuil_fruit}°</span>
               </div>
             <small style="color: #64748b;">${msg}</small>
-                <div class="month-badges-container">${agr.moisBadges.map(m => `<div class="m-badge ${m.color}"><span>${m.name}</span><span class="m-temp">${m.temp !== null ? m.temp+'°' : ''}</span></div>`).join('')}</div>`;
+                <div class="month-badges-container">${agr.moisBadges.map(m => `<div class="m-badge ${m.color}"><span>${m.name}</span><span class="m-temp">${(m.temp !== undefined && m.temp !== null) ? m.temp+'°' : ''}</span></div>`).join('')}</div>`;
             container.appendChild(card);
         });
     }

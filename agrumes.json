@@ -1373,7 +1373,7 @@
   {
     "nom": "Citrangequat Thomasville",
     "seuil_arbre": -15,
-    "seuil_fruit": -3,
+    "seuil_fruit": -4,
     "recolte": [
       12,
       1,
