@@ -644,7 +644,7 @@
     ]
   },
   {
-    "nom": "Morton Asel",
+    "nom": "Citrange Morton Asel",
     "seuil_arbre": -15,
     "seuil_fruit": -3,
     "recolte": [
@@ -1375,6 +1375,7 @@
     "seuil_arbre": -15,
     "seuil_fruit": -4,
     "recolte": [
+      11,
       12,
       1,
       2
