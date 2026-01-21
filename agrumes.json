@@ -1027,9 +1027,10 @@
   },
   {
     "nom": "Citsuma de Prague",
-    "seuil_arbre": -12,
+    "seuil_arbre": -15,
     "seuil_fruit": -5,
     "recolte": [
+      11,
       12,
       1,
       2

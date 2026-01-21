@@ -37,7 +37,7 @@
 
     /* 2. Sidebar avec box-sizing pour éviter de pousser les murs */
     #sidebar {
-        width: 420px;
+        width: 450px;
         background: var(--white);
         border-left: 1px solid #e2e8f0;
         padding: 20px;
@@ -189,6 +189,22 @@
         cursor: pointer;
         font-size: 0.9rem;
     }
+
+    .search-link {
+        text-decoration: none;
+        margin-left: 8px;
+        display: inline-flex;
+        align-self: center;
+    }
+
+    .search-icon {
+        fill: #94a3b8;
+        transition: fill 0.2s ease;
+    }
+
+    .search-link:hover .search-icon {
+        fill: var(--primary);
+    }
     </style>
 </head>
 <body>
@@ -338,14 +354,24 @@
             card.className = `agrume-card status-${agr.statut}`;
             let msg = (agr.statut === "ko") ? "Variété non adaptée en pleine terre" :
                       (agr.statut === "ok") ? "Variété adaptée" :
-                      (agr.statut === "early") ? "Récolte précoce impérative" :
-                      (agr.aDuFroidSeverement) ? "Récolte impossible (gel total)" : "Risque de gel (surveillance nécessaire)";
+                      (agr.statut === "early") ? "Récolte précoce recommandée" :
+                      (agr.aDuFroidSeverement) ? "Récolte probablement compromise (gel total)" : "Risque de gel sur la récolte (surveillance nécessaire)";
+
+            const cleanName = agr.nom.split('(')[0].trim();
+            const googleUrl = `https://www.google.com/search?q=agrume+${encodeURIComponent(cleanName)}`;
 
             card.innerHTML = `
             <div style="display:flex; justify-content:space-between; align-items: baseline; flex-wrap: wrap; gap: 5px;">
-                <strong style="flex: 1; min-width: 120px;">${agr.nom.split('(')[0]}</strong>
-                <span class="limits-tag">Arbre : ${agr.seuil_arbre}° | Fruits : ${agr.seuil_fruit}°</span>
-            </div>
+                  <div style="display:flex; align-items: center; flex: 1; min-width: 120px;">
+                      <strong>${cleanName}</strong>
+                      <a href="${googleUrl}" target="_blank" class="search-link" title="Rechercher sur Google">
+                          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                              <path d="M14 3h7v7h-2V6.41l-9 9L8.59 14l9-9H14V3zM5 5h5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-5h-2v5H5V5z"/>
+                          </svg>
+                      </a>
+                  </div>
+                  <span class="limits-tag">Arbre : ${agr.seuil_arbre}° | Fruits : ${agr.seuil_fruit}°</span>
+              </div>
             <small style="color: #64748b;">${msg}</small>
                 <div class="month-badges-container">${agr.moisBadges.map(m => `<div class="m-badge ${m.color}"><span>${m.name}</span><span class="m-temp">${m.temp !== null ? m.temp+'°' : ''}</span></div>`).join('')}</div>`;
             container.appendChild(card);
