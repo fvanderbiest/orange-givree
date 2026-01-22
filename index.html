@@ -175,7 +175,7 @@
     .source-mention {
         font-size: 0.7rem;
         color: #94a3b8;
-        margin-top: auto;
+        /* margin-top: auto; */
         padding-top: 15px;
         text-align: center;
     }
@@ -204,6 +204,56 @@
 
     .search-link:hover .search-icon {
         fill: var(--primary);
+    }
+
+    .tip-box {
+        margin-top: auto;
+        padding: 15px;
+        background: #fff7ed; /* Orange très clair */
+        border: 1px dashed #fdba74; /* Bordure pointillée orange */
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .tip-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .tip-icon {
+        font-size: 1.5rem;
+    }
+
+    .tip-text strong {
+        font-size: 0.85rem;
+        color: #c2410c;
+        display: block;
+    }
+
+    .tip-text p {
+        margin: 2px 0 0 0;
+        font-size: 0.75rem;
+        color: #9a3412;
+    }
+
+    .tip-button {
+        display: block;
+        text-align: center;
+        background: #c2410c;
+        color: white;
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 8px;
+        border-radius: 8px;
+        transition: background 0.2s ease;
+    }
+
+    .tip-button:hover {
+        background: #9a3412;
     }
     </style>
 </head>
@@ -234,6 +284,18 @@
     </div>
     <div id="agrumes-container">
         <p style="color: #94a3b8; font-style: italic; text-align: center; margin-top: 20px;">Cliquez sur un point pour lancer l'analyse.</p>
+    </div>
+    <div class="tip-box">
+        <div class="tip-content">
+            <span class="tip-icon">☕</span>
+            <div class="tip-text">
+                <strong>Cette application vous est utile ?</strong>
+                <p><a href="https://www.leboncoin.fr/ad/jardin_plantes/3132238080" target="_blank">Envoyez moi des greffons</a> ;-)</p>
+                <p>ou</p>
+                <p><a href="https://ko-fi.com/fvanderbiest" target="_blank">Offrez-moi un café</a> pour soutenir le projet !</p>
+            </div>
+        </div>
+        <!--a href="https://ko-fi.com/fvanderbiest" target="_blank" class="tip-button">Envoyer un tip</a-->
     </div>
     <div class="source-mention">
         <p>Données Météo-France 2006-2026 - <a href="https://www.data.gouv.fr/reuses/orange-givree" target="_blank">data.gouv.fr</a>.</p>
