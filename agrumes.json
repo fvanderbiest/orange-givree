@@ -1,2312 +1,257 @@
 [
-  {
-    "nom": "Main de Bouddha panaché",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Cédrat Diamante Cabosse",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Cédrat Ponderosa",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Castello panaché",
-    "seuil_arbre": -8,
-    "seuil_fruit": -2,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Lime de Perse",
-    "seuil_arbre": -5,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Orange Vanille sanguine",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Orange Violette des Vallées",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Calamondin",
-    "seuil_arbre": -2,
-    "seuil_fruit": 0,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Cédrat Diamante",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Cédrat Corse",
-    "seuil_arbre": -4,
-    "seuil_fruit": 0,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Citron caviar Violet",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Lime douce de Palestine",
-    "seuil_arbre": -5,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Pamplemousse de Siam",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Mandarine Beauty of Glen Retreat",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Cédrat Etrog",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Cédrat Bajoura",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      10,
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Citron Caviar Pink",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Kumquat Centenial panaché",
-    "seuil_arbre": -8,
-    "seuil_fruit": -4,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Citron Monachello",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Cédrat Rugosa",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Citrus Lemonade",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Citron Vanille",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Citron Sanguinea",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Citron caviar Ruby",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Lime rouge de Tahiti",
-    "seuil_arbre": -6,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Lime Sunrise",
-    "seuil_arbre": -5,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Satsuma Japan Seedless",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Mandarine Shiva Mikan Koji",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Mandarine Murcott",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Mandared",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Mandarine Kishu mikan",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Mandarine Clemandor",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Clementine hernandina",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Clementine Caffin",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Mandarine Cami",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Orange Tarocco Galici",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Orange Tarocco Sciara",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Pamplemousse Sochi",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Pamplemousse Californien",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Pamplemousse d’Ischia",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Pamplemousse Chandler",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Pomelo Shambar",
-    "seuil_arbre": -8,
-    "seuil_fruit": -5,
-    "recolte": [
-      3,
-      4
-    ]
-  },
-  {
-    "nom": "Tangelo Samson",
-    "seuil_arbre": -8,
-    "seuil_fruit": -2,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Tangelo Thomson",
-    "seuil_arbre": -9,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Yuzu gold",
-    "seuil_arbre": -12,
-    "seuil_fruit": -8,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Pomelo Rio Red",
-    "seuil_arbre": -10,
-    "seuil_fruit": -5,
-    "recolte": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ]
-  },
-  {
-    "nom": "Pomelo Thompson",
-    "seuil_arbre": -8,
-    "seuil_fruit": -5,
-    "recolte": [
-      12,
-      1,
-      2,
-      3,
-      4,
-      5
-    ]
-  },
-  {
-    "nom": "Pamplemousse Sunshine",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Pamplemousse Thai Honey",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Pomelo Marsh Seedless",
-    "seuil_arbre": -9,
-    "seuil_fruit": -5,
-    "recolte": [
-      12,
-      1,
-      2,
-      3,
-      4,
-      5
-    ]
-  },
-  {
-    "nom": "Citron Caviar Black",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Citron Caniculata de Palerme",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Bergamote Melarosa",
-    "seuil_arbre": -7,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Orange Tarocco Meli",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Orange  Maltaise Vanille",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Orange douce de Banuyls",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Satsuma Xie Shan",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Satsuma Kuno Wase",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Sudachi Reddish Bud jaune",
-    "seuil_arbre": -12,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Clementine x Yuzu 222",
-    "seuil_arbre": -12,
-    "seuil_fruit": -3,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Clementine x Yuzu 333",
-    "seuil_arbre": -12,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Orange Douce Gosset",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Mandarine Shiva Mikan",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Satsuma Saïgon",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Bigarade Bouquet de Nice",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Bigarade de Seville",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Pamplemousse Seddock Slavic",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Citron caviar Amazone",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9
-    ]
-  },
-  {
-    "nom": "Glen",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Citrange Morton Asel",
-    "seuil_arbre": -15,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Hybride Taïchang",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Mandarine Shangsa",
-    "seuil_arbre": -14,
-    "seuil_fruit": -5,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Shunkokan",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Kotokan",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Tangelo Mapo",
-    "seuil_arbre": -9,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Oni Yuzu",
-    "seuil_arbre": -7,
-    "seuil_fruit": -8,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Satsuma Iwazaki",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      9
-    ]
-  },
-  {
-    "nom": "Bigarade du Vatican",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Kinkoji",
-    "seuil_arbre": -14,
-    "seuil_fruit": -5,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Kabosu",
-    "seuil_arbre": -14,
-    "seuil_fruit": -8,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Citron Santa Teresa",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Pomelo Bloom Sweet",
-    "seuil_arbre": -8,
-    "seuil_fruit": -5,
-    "recolte": [
-      3
-    ]
-  },
-  {
-    "nom": "Satsuma sugiyama",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Satsuma Wase 230",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Satsuma Tami kawa wase",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      10
-    ]
-  },
-  {
-    "nom": "Clementine Nules",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Orange Navelina",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Amber Sweet",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Tangelo Orlando",
-    "seuil_arbre": -9,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Tangelo Pearl",
-    "seuil_arbre": -9,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Mandarine Honey",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Cédrat de Florence",
-    "seuil_arbre": -6,
-    "seuil_fruit": 0,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Cédrat Pomme d’Adam",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      1
-    ]
-  },
-  {
-    "nom": "Pompia",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citron Vinato",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Citron Caviar Green",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citron Beldi",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Eremolemon Coachella",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      9
-    ]
-  },
-  {
-    "nom": "Pomelo Cocktail",
-    "seuil_arbre": -9,
-    "seuil_fruit": -5,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Bigarade Dolce del Gargano",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Satsuma Owari Panachée",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citrange Glen",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Orange sanguine Vessieres",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ]
-  },
-  {
-    "nom": "Orange Gianduja",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Ugly ‘Big Guy’",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Tangelo zesty BA9",
-    "seuil_arbre": -9,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Satsuma Aoshima",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Bigarade Striatta “Bizaria”",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Citron Caviar Lune",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Citsuma de Prague",
-    "seuil_arbre": -15,
-    "seuil_fruit": -4,
-    "recolte": [
-      11,
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Satsuma Silver Hill",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Satsuma Miyagawa",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Satsuma Collot",
-    "seuil_arbre": -13,
-    "seuil_fruit": -4,
-    "recolte": [
-      10,
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Limequat Tavares",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Mandarine Keraji Kabushi",
-    "seuil_arbre": -12,
-    "seuil_fruit": -5,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Mandarine Tardivo di Ciaculli",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Poncire de Collioure",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Main de Bouddha",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Cédrat Ordenare",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Calamondin Panaché",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Citron caviar Nacré",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Citron Caviar Malabar",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9
-    ]
-  },
-  {
-    "nom": "Yuzu Dragon",
-    "seuil_arbre": -14,
-    "seuil_fruit": -8,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Orange Chocolat",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Citron caviar Saphir rose",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9
-    ]
-  },
-  {
-    "nom": "Citron caviar Jade",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Citron Zagora Bianca",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Lime Troyer x Rang pur",
-    "seuil_arbre": -12,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Dragon Lime",
-    "seuil_arbre": -14,
-    "seuil_fruit": -2,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Faustrime",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      9
-    ]
-  },
-  {
-    "nom": "Yuzu citron",
-    "seuil_arbre": -12,
-    "seuil_fruit": -8,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citron caviar Grenat",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Citron caviar Bonbon",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      10
-    ]
-  },
-  {
-    "nom": "Citron Amalfi Sfusato",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Lime Pursha",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Sudachi Oishï",
-    "seuil_arbre": -12,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Mandarine Leo Mahalo",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citron caviar Diamant rose",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Tangelo Subarashi / Shiranui / Dekopon",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1,
-      2,
-      3,
-      4,
-      5
-    ]
-  },
-  {
-    "nom": "Cédrat Maxima",
-    "seuil_arbre": -5,
-    "seuil_fruit": 0,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Citron caviar Agate",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Citron caviar Banana",
-    "seuil_arbre": -7,
-    "seuil_fruit": 0,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Blood lime",
-    "seuil_arbre": -7,
-    "seuil_fruit": -2,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Citrangequat Thomasville",
-    "seuil_arbre": -15,
-    "seuil_fruit": -4,
-    "recolte": [
-      11,
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Citron Dioscuria",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Sambokan",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      3
-    ]
-  },
-  {
-    "nom": "Pamplemousse Rose",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "nom": "Mandarine Shekwasha",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citron pink Variegatta",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Sunquat",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Ponkan",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Lime Pursha Géant",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Amoa 8",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citron de Pezenas",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Key lime",
-    "seuil_arbre": -5,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Citron Yuko",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Lime de Guadeloupe",
-    "seuil_arbre": -5,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Pamplemousse Hirado Buntan",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Ichanglemon Wagashi",
-    "seuil_arbre": -12,
-    "seuil_fruit": -5,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Orange sanguine des montagnes corses",
-    "seuil_arbre": -10,
-    "seuil_fruit": -5,
-    "recolte": [
-      12,
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "nom": "Natsudaidai",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      6
-    ]
-  },
-  {
-    "nom": "Auline",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      4
-    ]
-  },
-  {
-    "nom": "Hana yuzu",
-    "seuil_arbre": -15,
-    "seuil_fruit": -8,
-    "recolte": [
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Bergamote Feminello",
-    "seuil_arbre": -8,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Citron de Sorente",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Bergamote Castagnaro",
-    "seuil_arbre": -8,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Citron Eureka",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Clementine Rubino Sanguine",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Orange Washington Navel",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "USA 119",
-    "seuil_arbre": -15,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Mandarine Blidah",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Orange Tarocco Rosso",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Ugly",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Satsuma Okitsu",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      9
-    ]
-  },
-  {
-    "nom": "Mandarine Kishu Nooka",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Tangelo Mineola",
-    "seuil_arbre": -10,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citron Pavlovski",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Meyer x Doppio",
-    "seuil_arbre": -8,
-    "seuil_fruit": -4,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Orange Navel d’été",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Orange Fragola",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Satsuma Owari",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Mandarine Nova",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Satsuma Clausellina",
-    "seuil_arbre": -10,
-    "seuil_fruit": -4,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Clementine Nuclem",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Citron de Bornéo",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Tangelo Lo wekiwa",
-    "seuil_arbre": -9,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Clementine SRA 92",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Kumquat Fukushu",
-    "seuil_arbre": -10,
-    "seuil_fruit": -4,
-    "recolte": [
-      11
-    ]
-  },
-  {
-    "nom": "Pomelo Welker",
-    "seuil_arbre": -9,
-    "seuil_fruit": -5,
-    "recolte": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ]
-  },
-  {
-    "nom": "Kumquat Giganteum",
-    "seuil_arbre": -8,
-    "seuil_fruit": -4,
-    "recolte": [
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Mandarine Keraji Voss D14",
-    "seuil_arbre": -14,
-    "seuil_fruit": -5,
-    "recolte": [
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Pomelo Duncan",
-    "seuil_arbre": -10,
-    "seuil_fruit": -5,
-    "recolte": [
-      6
-    ]
-  },
-  {
-    "nom": "Citradia 139",
-    "seuil_arbre": -12,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Orange Cara Cara",
-    "seuil_arbre": -11,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Ichanglemon",
-    "seuil_arbre": -14,
-    "seuil_fruit": -5,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citrange remo",
-    "seuil_arbre": -15,
-    "seuil_fruit": -3,
-    "recolte": [
-      9
-    ]
-  },
-  {
-    "nom": "Limequat Eustis",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Sudachi Seneca Orange",
-    "seuil_arbre": -12,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Mandarine d’Eze",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Orange Moro",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Bergamote de Tunis",
-    "seuil_arbre": -8,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Lime Guarrigue",
-    "seuil_arbre": -7,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Lime Karna Khatta",
-    "seuil_arbre": -12,
-    "seuil_fruit": -6,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Mandarine Keraji",
-    "seuil_arbre": -12,
-    "seuil_fruit": -5,
-    "recolte": [
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Mandarine Juanita",
-    "seuil_arbre": -10,
-    "seuil_fruit": -4,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Kiyomi",
-    "seuil_arbre": -9,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Haruka",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      3, 4, 5
-    ]
-  },
-  {
-    "nom": "Orangequat 46",
-    "seuil_arbre": -12,
-    "seuil_fruit": -4,
-    "recolte": [
-      2, 3, 4, 5
-    ]
-  },
-  {
-    "nom": "Satsuma Owari Francis Soules",
-    "seuil_arbre": -14,
-    "seuil_fruit": -4,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Eremorange",
-    "seuil_arbre": -15,
-    "seuil_fruit": -3,
-    "recolte": [
-      9
-    ]
-  },
-  {
-    "nom": "Citron Meyer",
-    "seuil_arbre": -9,
-    "seuil_fruit": -4,
-    "recolte": [
-      11,
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Citron Bignette",
-    "seuil_arbre": -8,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Yuzu N1",
-    "seuil_arbre": -18,
-    "seuil_fruit": -8,
-    "recolte": [
-      9,
-      10
-    ]
-  },
-  {
-    "nom": "Kumquat Meiwa",
-    "seuil_arbre": -14,
-    "seuil_fruit": -4,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Yuzu N3",
-    "seuil_arbre": -18,
-    "seuil_fruit": -8,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Citron galet de la Réunion",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Pomelo Poorman",
-    "seuil_arbre": -9,
-    "seuil_fruit": -5,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Pomelo Star Ruby",
-    "seuil_arbre": -8,
-    "seuil_fruit": -5,
-    "recolte": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ]
-  },
-  {
-    "nom": "Pink lime",
-    "seuil_arbre": -5,
-    "seuil_fruit": -2,
-    "recolte": [
-      12,
-      1,
-      2
-    ]
-  },
-  {
-    "nom": "Bergamote de Calabre",
-    "seuil_arbre": -8,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Yuzu Doux N30",
-    "seuil_arbre": -12,
-    "seuil_fruit": -8,
-    "recolte": [
-      10,
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Ichanglemon Shenguyen",
-    "seuil_arbre": -15,
-    "seuil_fruit": -5,
-    "recolte": [
-      11,
-      12
-    ]
-  },
-  {
-    "nom": "Yuzu",
-    "seuil_arbre": -15,
-    "seuil_fruit": -8,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Lime du Mexique",
-    "seuil_arbre": -6,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Lime des Caraïbes",
-    "seuil_arbre": -5,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Hong Papeda",
-    "seuil_arbre": -10,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Citron Gilou",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Pomelo Enzo",
-    "seuil_arbre": -9,
-    "seuil_fruit": -5,
-    "recolte": [
-      3,
-      4
-    ]
-  },
-  {
-    "nom": "Limequat Lakeland",
-    "seuil_arbre": -7,
-    "seuil_fruit": -3,
-    "recolte": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Pamplemousse Red Madoka",
-    "seuil_arbre": -6,
-    "seuil_fruit": -3,
-    "recolte": [
-      12
-    ]
-  },
-  {
-    "nom": "Lime de Tahiti",
-    "seuil_arbre": -6,
-    "seuil_fruit": -2,
-    "recolte": [
-      10,
-      11
-    ]
-  },
-  {
-    "nom": "Bergamote Fantastico",
-    "seuil_arbre": -8,
-    "seuil_fruit": -2,
-    "recolte": [
-      11,
-      12,
-      1
-    ]
-  },
-  {
-    "nom": "Pomelo Oro Blanco",
-    "seuil_arbre": -8,
-    "seuil_fruit": -5,
-    "recolte": [
-      11,
-      12,
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "nom": "Kumquat Nameiwa",
-    "seuil_arbre": -14,
-    "seuil_fruit": -4,
-    "recolte": [
-      4
-    ]
-  },
-  {
-    "nom": "Mandarine Harumi 1",
-    "seuil_arbre": -12,
-    "seuil_fruit": -3,
-    "recolte": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "nom": "Pomelo Bulbargence",
-    "seuil_arbre": -8,
-    "seuil_fruit": -5,
-    "recolte": [
-      11,
-      12,
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "nom": "Combava",
-    "seuil_arbre": -5,
-    "seuil_fruit": -3,
-    "recolte": [
-      9,
-      10
-    ]
-  }
+  {"nom": "Amber Sweet", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [10, 11]},
+  {"nom": "Amoa 8", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Auline", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [4]},
+  {"nom": "Bergamote Castagnaro", "seuil_arbre": -8, "seuil_fruit": -2, "recolte": [11, 12, 1]},
+  {"nom": "Bergamote de Calabre", "seuil_arbre": -8, "seuil_fruit": -2, "recolte": [11, 12, 1]},
+  {"nom": "Bergamote de Tunis", "seuil_arbre": -8, "seuil_fruit": -2, "recolte": [11, 12, 1]},
+  {"nom": "Bergamote Fantastico", "seuil_arbre": -7, "seuil_fruit": -2, "recolte": [11, 12, 1]},
+  {"nom": "Bergamote Feminello", "seuil_arbre": -8, "seuil_fruit": -2, "recolte": [11, 12, 1]},
+  {"nom": "Bergamote Melarosa", "seuil_arbre": -7, "seuil_fruit": -2, "recolte": [11, 12, 1]},
+  {"nom": "Bigarade Australienne", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [1, 2]},
+  {"nom": "Bigarade Bouquet de Nice", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Bigarade de Seville", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Bigarade Dolce del Gargano", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Bigarade du Vatican", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Bigarade Striatta “Bizaria”", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Blood lime", "seuil_arbre": -7, "seuil_fruit": -2, "recolte": [9, 10]},
+  {"nom": "Calamondin", "seuil_arbre": -2, "seuil_fruit": 0, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Calamondin Panaché", "seuil_arbre": -5, "seuil_fruit": -3, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Castello panaché", "seuil_arbre": -8, "seuil_fruit": -2, "recolte": [12, 1, 2]},
+  {"nom": "Citradia 139", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11, 12]},
+  {"nom": "Citrange Glen", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Citrange Morton Asel", "seuil_arbre": -15, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Citrangequat Thomasville", "seuil_arbre": -15, "seuil_fruit": -3, "recolte": [11, 12, 1, 2, 3, 4, 5, 6]},
+  {"nom": "Citrangeremo", "seuil_arbre": -15, "seuil_fruit": -3, "recolte": [9, 10]},
+  {"nom": "Citron Amalfi Sfusato", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Citron Beldi", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [12, 1]},
+  {"nom": "Citron Bignette", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [9, 10, 11, 12, 1, 2, 3]},
+  {"nom": "Citron Caniculata de Palerme", "seuil_arbre": -5, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Citron caviar Agate", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [10, 11]},
+  {"nom": "Citron caviar Amazone", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9]},
+  {"nom": "Citron caviar Banana", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9, 10]},
+  {"nom": "Citron caviar Black", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [12]},
+  {"nom": "Citron caviar Bonbon", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [10]},
+  {"nom": "Citron caviar Diamant rose", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9, 10]},
+  {"nom": "Citron Caviar Green", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [11, 12]},
+  {"nom": "Citron caviar Grenat", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9, 10, 11]},
+  {"nom": "Citron caviar Jade", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9, 10, 11]},
+  {"nom": "Citron Caviar Lune", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [12]},
+  {"nom": "Citron Caviar Malabar", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9]},
+  {"nom": "Citron caviar Nacré", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9, 10]},
+  {"nom": "Citron Caviar Pink", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9, 10]},
+  {"nom": "Citron caviar Ruby", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9, 10]},
+  {"nom": "Citron caviar Saphir rose", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9]},
+  {"nom": "Citron caviar Violet", "seuil_arbre": -7, "seuil_fruit": 0, "recolte": [9, 10, 11]},
+  {"nom": "Citron de Bornéo", "seuil_arbre": -5, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Citron de Pezenas", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Citron de Sorente", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Citron Dioscuria", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1]},
+  {"nom": "Citron Eureka", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Citron galet de la Réunion", "seuil_arbre": -5, "seuil_fruit": -3, "recolte": [10, 11]},
+  {"nom": "Citron Gilou", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [1, 2, 3]},
+  {"nom": "Citron Meyer", "seuil_arbre": -8, "seuil_fruit": -5, "recolte": [11, 12, 1, 2]},
+  {"nom": "Citron Monachello", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [1, 2, 3]},
+  {"nom": "Citron Pavlovski / Pavlovo", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Citron pink Variegatta", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [1, 2, 3]},
+  {"nom": "Citron Sanguinea", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [1, 2]},
+  {"nom": "Citron Santa Teresa", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [6, 7, 8, 9, 10]},
+  {"nom": "Citron Vanille", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [1, 2]},
+  {"nom": "Citron Vinato", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [1, 2]},
+  {"nom": "Citron Yuko", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Citron Zagora Bianca", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [1, 2, 3]},
+  {"nom": "Citrumelo \"5 Star\"", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12]},
+  {"nom": "Citrus Lemonade", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12, 1, 2, 3]},
+  {"nom": "Citsuma de Prague", "seuil_arbre": -16, "seuil_fruit": -4, "recolte": [11, 12, 1, 2]},
+  {"nom": "Clementine Caffin", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [9, 10]},
+  {"nom": "Clementine hernandina", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Clementine Nuclem", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Clementine Nules / Clemenules", "seuil_arbre": -9, "seuil_fruit": -6, "recolte": [11, 12, 1, 2]},
+  {"nom": "Clementine Rubino Sanguine", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Clementine SRA 92", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Clementine x Yuzu 222", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11]},
+  {"nom": "Clementine x Yuzu 333", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [1, 2]},
+  {"nom": "Combava", "seuil_arbre": -5, "seuil_fruit": -3, "recolte": [9, 10]},
+  {"nom": "Cédrat Bajoura", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [10, 11, 12, 1]},
+  {"nom": "Cédrat Corse", "seuil_arbre": -4, "seuil_fruit": 0, "recolte": [11, 12, 1]},
+  {"nom": "Cédrat de Florence", "seuil_arbre": -6, "seuil_fruit": 0, "recolte": [11, 12, 1]},
+  {"nom": "Cédrat Diamante", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [11, 12, 1]},
+  {"nom": "Cédrat Diamante Cabosse", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [11, 12, 1]},
+  {"nom": "Cédrat Etrog", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [11, 12, 1]},
+  {"nom": "Cédrat Maxima", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [11, 12, 1]},
+  {"nom": "Cédrat Ordenare", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [11]},
+  {"nom": "Cédrat Pomme d’Adam", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [1]},
+  {"nom": "Cédrat Ponderosa", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [11, 12, 1]},
+  {"nom": "Cédrat Rugosa", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [12]},
+  {"nom": "Dragon Lime", "seuil_arbre": -14, "seuil_fruit": -2, "recolte": [10, 11, 12, 1, 2]},
+  {"nom": "Eremolemon Coachella", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [9]},
+  {"nom": "Eremorange", "seuil_arbre": -15, "seuil_fruit": -2, "recolte": [9, 10, 11]},
+  {"nom": "Faustrime", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [9]},
+  {"nom": "Glen", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11, 12, 1]},
+  {"nom": "Hana yuzu", "seuil_arbre": -15, "seuil_fruit": -8, "recolte": [10, 11, 12, 1, 2]},
+  {"nom": "Haruka", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [2, 3, 4, 5]},
+  {"nom": "Hong Papeda", "seuil_arbre": -12, "seuil_fruit": -5, "recolte": [1, 2, 3]},
+  {"nom": "Huyou", "seuil_arbre": -11, "seuil_fruit": -4, "recolte": [11, 12]},
+  {"nom": "Hybride Taïchang", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2, 3]},
+  {"nom": "Ichanglemon", "seuil_arbre": -12, "seuil_fruit": -5, "recolte": [11, 12]},
+  {"nom": "Ichanglemon Shenguyen", "seuil_arbre": -12, "seuil_fruit": -5, "recolte": [11, 12]},
+  {"nom": "Ichanglemon Wagashi", "seuil_arbre": -12, "seuil_fruit": -5, "recolte": [11]},
+  {"nom": "Ichangquat", "seuil_arbre": -14, "seuil_fruit": -3, "recolte": [8, 9, 10, 11]},
+  {"nom": "Kabosu", "seuil_arbre": -14, "seuil_fruit": -8, "recolte": [9, 10, 11]},
+  {"nom": "Key lime", "seuil_arbre": -5, "seuil_fruit": -2, "recolte": [10, 11]},
+  {"nom": "Kinkoji", "seuil_arbre": -14, "seuil_fruit": -5, "recolte": [11, 12]},
+  {"nom": "Kiyomi", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Kotokan", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2, 3]},
+  {"nom": "Kumquat Centenial panaché", "seuil_arbre": -8, "seuil_fruit": -4, "recolte": [12, 1, 2]},
+  {"nom": "Kumquat Fukushu", "seuil_arbre": -10, "seuil_fruit": -4, "recolte": [11, 12]},
+  {"nom": "Kumquat Giganteum", "seuil_arbre": -8, "seuil_fruit": -4, "recolte": [2, 3]},
+  {"nom": "Kumquat Meiwa", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [1, 2, 3, 4]},
+  {"nom": "Kumquat Nameiwa", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [1, 2, 3, 4]},
+  {"nom": "Lime de Guadeloupe", "seuil_arbre": -5, "seuil_fruit": -2, "recolte": [10, 11]},
+  {"nom": "Lime de Perse", "seuil_arbre": -5, "seuil_fruit": -2, "recolte": [11, 12]},
+  {"nom": "Lime de Tahiti", "seuil_arbre": -6, "seuil_fruit": -2, "recolte": [10, 11]},
+  {"nom": "Lime des Caraïbes", "seuil_arbre": -5, "seuil_fruit": -2, "recolte": [10, 11]},
+  {"nom": "Lime douce de Palestine", "seuil_arbre": -5, "seuil_fruit": -2, "recolte": [10, 11]},
+  {"nom": "Lime du Mexique", "seuil_arbre": -6, "seuil_fruit": -2, "recolte": [10, 11]},
+  {"nom": "Lime Guarrigue", "seuil_arbre": -7, "seuil_fruit": -2, "recolte": [10, 11]},
+  {"nom": "Lime Karna Khatta", "seuil_arbre": -12, "seuil_fruit": -6, "recolte": [10, 11, 12, 1, 2]},
+  {"nom": "Lime Pursha", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Lime Pursha Géant", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Lime rouge de Tahiti", "seuil_arbre": -6, "seuil_fruit": -2, "recolte": [10, 11]},
+  {"nom": "Lime Sunrise", "seuil_arbre": -5, "seuil_fruit": -2, "recolte": [11, 12]},
+  {"nom": "Lime Troyer x Rang pur", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Limequat Eustis", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Limequat Lakeland", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Limequat Tavares", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Main de Bouddha", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [11]},
+  {"nom": "Main de Bouddha panaché", "seuil_arbre": -5, "seuil_fruit": 0, "recolte": [11]},
+  {"nom": "Mandared", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [2, 3]},
+  {"nom": "Mandarine Beauty of Glen Retreat", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Mandarine Blidah", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Mandarine Cami", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [2, 3]},
+  {"nom": "Mandarine Clemandor", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Mandarine d’Eze", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [12, 1]},
+  {"nom": "Mandarine Harumi 1", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [1, 2, 3, 4]},
+  {"nom": "Mandarine Honey", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [10, 11, 12]},
+  {"nom": "Mandarine Juanita", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [1, 2, 3]},
+  {"nom": "Mandarine Keraji", "seuil_arbre": -12, "seuil_fruit": -5, "recolte": [9, 10, 11]},
+  {"nom": "Mandarine Keraji Kabushi", "seuil_arbre": -12, "seuil_fruit": -5, "recolte": [10, 11, 12]},
+  {"nom": "Mandarine Keraji Voss D14", "seuil_arbre": -14, "seuil_fruit": -5, "recolte": [9, 10, 11]},
+  {"nom": "Mandarine Kishu mikan", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Mandarine Kishu Nooka", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Mandarine Leo Mahalo", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Mandarine Murcott", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [2, 3]},
+  {"nom": "Mandarine Nova", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Mandarine Robinson", "seuil_arbre": -13, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Mandarine Shangsa", "seuil_arbre": -13, "seuil_fruit": -5, "recolte": [10, 11, 12]},
+  {"nom": "Mandarine Shekwasha", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [10, 11, 12]},
+  {"nom": "Mandarine Shiva Mikan", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Mandarine Shiva Mikan Koji", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Mandarine Sunburst", "seuil_arbre": -13, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Mandarine Tardivo di Ciaculli", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2, 3]},
+  {"nom": "Meyer x Doppio", "seuil_arbre": -8, "seuil_fruit": -4, "recolte": [12]},
+  {"nom": "Nansho Daidai / Natsudaidai / Citrus taiwanica", "seuil_arbre": -15, "seuil_fruit": -6, "recolte": [10, 11, 12, 1, 2]},
+  {"nom": "Natsumikan", "seuil_arbre": -11, "seuil_fruit": -4, "recolte": [4, 5]},
+  {"nom": "Oni Yuzu", "seuil_arbre": -7, "seuil_fruit": -8, "recolte": [11, 12]},
+  {"nom": "Orangequat 46", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [2, 3, 4, 5]},
+  {"nom": "Oranger Cara Cara", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [12, 1]},
+  {"nom": "Oranger Chocolat", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Oranger Douce de Banuyls", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Oranger Douce Gosset", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Oranger Fragola", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Oranger Fukumoto", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [10, 11, 12]},
+  {"nom": "Oranger Gianduja", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2, 3]},
+  {"nom": "Oranger Hamlin", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Oranger Lane Late", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2, 3, 4]},
+  {"nom": "Oranger M7", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [10, 11, 12]},
+  {"nom": "Oranger Maltaise Vanille", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Oranger Moro", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1, 2]},
+  {"nom": "Oranger Navel d’été", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [9, 10]},
+  {"nom": "Oranger Navelate", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2, 3]},
+  {"nom": "Oranger Navelina", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Oranger Newhall", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [10, 11, 12]},
+  {"nom": "Oranger Sanguine des montagnes corses", "seuil_arbre": -10, "seuil_fruit": -5, "recolte": [12, 1, 2, 3, 4]},
+  {"nom": "Oranger Sanguine Vessieres", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [1, 2, 3, 4, 5]},
+  {"nom": "Oranger Tarocco Galici", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Oranger Tarocco Meli", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Oranger Tarocco Rosso", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2, 3]},
+  {"nom": "Oranger Tarocco Sciara", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Oranger Vanille sanguine", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Oranger Violette des Vallées", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Oranger Washington Navel", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Pamplemousse Beni Madoka", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [1, 2, 3, 4, 5, 6]},
+  {"nom": "Pamplemousse Californien", "seuil_arbre": -5, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Pamplemousse Chandler", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [11]},
+  {"nom": "Pamplemousse de Siam", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [11]},
+  {"nom": "Pamplemousse d’Ischia", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [11]},
+  {"nom": "Pamplemousse Hirado Buntan", "seuil_arbre": -11, "seuil_fruit": -3, "recolte": [12, 1, 2, 3, 4, 5]},
+  {"nom": "Pamplemousse Red Madoka", "seuil_arbre": -6, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Pamplemousse Rose", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [1, 2, 3, 4]},
+  {"nom": "Pamplemousse Seddock Slavic", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [11]},
+  {"nom": "Pamplemousse Sochi", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Pamplemousse Sunshine", "seuil_arbre": -5, "seuil_fruit": -3, "recolte": [11]},
+  {"nom": "Pamplemousse Thai Honey", "seuil_arbre": -5, "seuil_fruit": -3, "recolte": [12]},
+  {"nom": "Pink lime", "seuil_arbre": -5, "seuil_fruit": -2, "recolte": [12, 1, 2]},
+  {"nom": "Pomelo Bloom Sweet", "seuil_arbre": -8, "seuil_fruit": -5, "recolte": [12, 1, 2, 3]},
+  {"nom": "Pomelo Bulbargence", "seuil_arbre": -8, "seuil_fruit": -5, "recolte": [11, 12, 1, 2, 3]},
+  {"nom": "Pomelo Cocktail", "seuil_arbre": -9, "seuil_fruit": -5, "recolte": [12, 1, 2]},
+  {"nom": "Pomelo Duncan", "seuil_arbre": -10, "seuil_fruit": -5, "recolte": [6]},
+  {"nom": "Pomelo Enzo", "seuil_arbre": -9, "seuil_fruit": -5, "recolte": [12, 1, 2, 3]},
+  {"nom": "Pomelo Kinkonshui", "seuil_arbre": -12, "seuil_fruit": -5, "recolte": [11, 12]},
+  {"nom": "Pomelo Marsh Seedless", "seuil_arbre": -9, "seuil_fruit": -5, "recolte": [12, 1, 2, 3, 4, 5]},
+  {"nom": "Pomelo Marumero / Kinkonji", "seuil_arbre": -12, "seuil_fruit": -5, "recolte": [11, 12]},
+  {"nom": "Pomelo Oro Blanco", "seuil_arbre": -8, "seuil_fruit": -5, "recolte": [11, 12, 1, 2, 3, 4]},
+  {"nom": "Pomelo Poorman", "seuil_arbre": -9, "seuil_fruit": -5, "recolte": [1, 2, 3]},
+  {"nom": "Pomelo Rio Red", "seuil_arbre": -9, "seuil_fruit": -5, "recolte": [11, 12, 1, 2, 3, 4, 5, 6]},
+  {"nom": "Pomelo Shambar", "seuil_arbre": -8, "seuil_fruit": -5, "recolte": [3, 4]},
+  {"nom": "Pomelo Star Ruby", "seuil_arbre": -8, "seuil_fruit": -5, "recolte": [1, 2, 3, 4, 5, 6]},
+  {"nom": "Pomelo Thompson", "seuil_arbre": -8, "seuil_fruit": -5, "recolte": [12, 1, 2, 3, 4, 5]},
+  {"nom": "Pomelo Welker", "seuil_arbre": -10, "seuil_fruit": -5, "recolte": [1, 2, 3, 4, 5, 6]},
+  {"nom": "Pompia", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [11, 12]},
+  {"nom": "Poncire de Collioure", "seuil_arbre": -5, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Ponkan", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Sambokan", "seuil_arbre": -10, "seuil_fruit": -3, "recolte": [3]},
+  {"nom": "Satsuma Aoshima", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11]},
+  {"nom": "Satsuma Clausellina", "seuil_arbre": -10, "seuil_fruit": -4, "recolte": [11, 12]},
+  {"nom": "Satsuma Collot", "seuil_arbre": -13, "seuil_fruit": -4, "recolte": [10, 11, 12, 1]},
+  {"nom": "Satsuma Iwazaki", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [9, 10, 11, 12]},
+  {"nom": "Satsuma Japan Seedless", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11, 12]},
+  {"nom": "Satsuma Kuno Wase", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11]},
+  {"nom": "Satsuma Miyagawa", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [9, 10]},
+  {"nom": "Satsuma Okitsu", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [9, 10, 11, 12]},
+  {"nom": "Satsuma Owari", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11, 12]},
+  {"nom": "Satsuma Owari Francis Soules", "seuil_arbre": -14, "seuil_fruit": -4, "recolte": [10, 11, 12]},
+  {"nom": "Satsuma Owari Panachée", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10, 11, 12]},
+  {"nom": "Satsuma Saïgon", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12]},
+  {"nom": "Satsuma Silver Hill", "seuil_arbre": -13, "seuil_fruit": -4, "recolte": [10, 11, 12]},
+  {"nom": "Satsuma sugiyama", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12, 1]},
+  {"nom": "Satsuma Tami kawa wase", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [10]},
+  {"nom": "Satsuma Wase 230", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [11, 12]},
+  {"nom": "Satsuma Xie Shan", "seuil_arbre": -12, "seuil_fruit": -4, "recolte": [9, 10, 11]},
+  {"nom": "Shunkokan", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1, 2, 3]},
+  {"nom": "Sudachi Oishï", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11, 12, 1]},
+  {"nom": "Sudachi Reddish Bud jaune", "seuil_arbre": -12, "seuil_fruit": -3, "recolte": [10, 11]},
+  {"nom": "Sudachi Seneca", "seuil_arbre": -13, "seuil_fruit": -3, "recolte": [10, 11]},
+  {"nom": "Sunquat", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [3, 4, 5, 6, 7, 8, 9, 10, 11]},
+  {"nom": "Tangelo Lo wekiwa", "seuil_arbre": -9, "seuil_fruit": -2, "recolte": [11, 12]},
+  {"nom": "Tangelo Mapo", "seuil_arbre": -9, "seuil_fruit": -2, "recolte": [11, 12]},
+  {"nom": "Tangelo Mineola", "seuil_arbre": -10, "seuil_fruit": -2, "recolte": [11, 12]},
+  {"nom": "Tangelo Nova", "seuil_arbre": -10, "seuil_fruit": -2, "recolte": [1, 2]},
+  {"nom": "Tangelo Orlando", "seuil_arbre": -9, "seuil_fruit": -2, "recolte": [11, 12]},
+  {"nom": "Tangelo Pearl", "seuil_arbre": -9, "seuil_fruit": -2, "recolte": [11, 12]},
+  {"nom": "Tangelo Samson", "seuil_arbre": -8, "seuil_fruit": -2, "recolte": [12, 1, 2]},
+  {"nom": "Tangelo Subarashi / Shiranui / Dekopon", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1, 2, 3, 4, 5]},
+  {"nom": "Tangelo Thomson", "seuil_arbre": -9, "seuil_fruit": -2, "recolte": [10, 11, 12]},
+  {"nom": "Tangelo zesty BA9", "seuil_arbre": -9, "seuil_fruit": -2, "recolte": [10, 11, 12]},
+  {"nom": "Tangor Beni Madonna", "seuil_arbre": -9, "seuil_fruit": -2, "recolte": [12, 1]},
+  {"nom": "Ugly", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1, 2, 3]},
+  {"nom": "Ugly ‘Big Guy’", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [12, 1, 2, 3]},
+  {"nom": "US119", "seuil_arbre": -13, "seuil_fruit": -3, "recolte": [11, 12, 1]},
+  {"nom": "Yuzu", "seuil_arbre": -15, "seuil_fruit": -8, "recolte": [10, 11]},
+  {"nom": "Yuzu citron", "seuil_arbre": -12, "seuil_fruit": -8, "recolte": [10, 11, 12]},
+  {"nom": "Yuzu Doux N30", "seuil_arbre": -12, "seuil_fruit": -8, "recolte": [10, 11, 12]},
+  {"nom": "Yuzu Dragon", "seuil_arbre": -14, "seuil_fruit": -8, "recolte": [10, 11, 12]},
+  {"nom": "Yuzu gold", "seuil_arbre": -12, "seuil_fruit": -8, "recolte": [10, 11, 12]},
+  {"nom": "Yuzu N1", "seuil_arbre": -16, "seuil_fruit": -8, "recolte": [9, 10]},
+  {"nom": "Yuzu N3", "seuil_arbre": -16, "seuil_fruit": -8, "recolte": [10, 11]}
 ]
