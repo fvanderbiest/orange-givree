@@ -236,7 +236,6 @@
   {"nom": "Pomelo Hassaku", "seuil_arbre": -11, "seuil_fruit": -5, "recolte": [2, 3, 4]},
   {"nom": "Pomelo Hirado Buntan", "seuil_arbre": -11, "seuil_fruit": -5, "recolte": [4, 5]},
   {"nom": "Pomelo Japan hybride 232", "seuil_arbre": -11, "seuil_fruit": -5, "recolte": [12, 1, 2, 3]},
-  {"nom": "Pomelo Kinkonshui", "seuil_arbre": -12, "seuil_fruit": -5, "recolte": [11, 12]},
   {"nom": "Pomelo Marsh Seedless", "seuil_arbre": -9, "seuil_fruit": -5, "recolte": [11, 12, 1, 2, 3, 4, 5]},
   {"nom": "Pomelo Melogold", "seuil_arbre": -8, "seuil_fruit": -5, "recolte": [11, 12, 1, 2, 3, 4]},
   {"nom": "Pomelo Oro Blanco", "seuil_arbre": -8, "seuil_fruit": -5, "recolte": [11, 12, 1, 2, 3, 4]},
