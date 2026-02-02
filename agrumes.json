@@ -202,7 +202,7 @@
   {"nom": "Oranger Navelina", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [11, 12, 1]},
   {"nom": "Oranger Newhall", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [10, 11, 12]},
   {"nom": "Oranger Salustiana", "seuil_arbre": -7, "seuil_fruit": -3, "recolte": [11, 12, 1, 2, 3]},
-  {"nom": "Oranger Sanguine des montagnes corses", "seuil_arbre": -10, "seuil_fruit": -5, "recolte": [12, 1, 2, 3, 4]},
+  {"nom": "Oranger Sanguine des montagnes corses", "seuil_arbre": -10, "seuil_fruit": -8, "recolte": [12, 1, 2, 3, 4]},
   {"nom": "Oranger Sanguine Vessieres", "seuil_arbre": -9, "seuil_fruit": -3, "recolte": [1, 2, 3, 4, 5]},
   {"nom": "Oranger Tarocco Bream", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [1, 2, 3]},
   {"nom": "Oranger Tarocco Galici", "seuil_arbre": -8, "seuil_fruit": -3, "recolte": [11, 12, 1]},
